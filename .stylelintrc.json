@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-named": null,
+    "max-nesting-depth": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["extends", "ignores"]
+      }
+    ],
+    "scss/at-rule-no-unknown": true,
+    "selector-class-pattern": ["^[a-z0-9_\\-]+$", { "resolveNestedSelectors": true }],
+    "selector-no-vendor-prefix": [false]
+  }
+}

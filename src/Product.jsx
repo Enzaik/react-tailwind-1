@@ -3,7 +3,7 @@ import React from 'react';
 function Product() {
   return (
     <div className="flex justify-center">
-      <div className="max-w-7xl">
+      <div className="max-w-7xl min-w-0">
         <div class="relative pb-5/6">
           <img
             src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
