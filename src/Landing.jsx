@@ -16,7 +16,7 @@ function Pricing() {
           <div class="text-base leading-6 font-semibold uppercase tracking-wider text-teal-300">
             Award winning support
           </div>
-          <h2 class="mt-2 text-white text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
+          <h2 class="mt-2 text-white text-3xl leading-9 font-semibold tracking-normal sm:text-4xl sm:leading-10">
             Compra. Vende. Disfruta
           </h2>
           <p class="mt-3 text-lg leading-7 text-gray-300">
