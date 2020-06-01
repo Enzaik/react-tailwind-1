@@ -19,8 +19,8 @@ function App() {
       {/* <ProgressBar /> */}
       {/* <Header /> */}
       {/* <Dropdown /> */}
-      <Product />
-      {/* <Pricing /> */}
+      {/* <Product /> */}
+      <Pricing />
       {/* <Landing2 /> */}
       {/* <Test /> */}
     </div>

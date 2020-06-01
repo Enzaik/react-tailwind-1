@@ -8,7 +8,7 @@ function Pricing() {
         <div class="text-center">
           <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider"></h2>
           <p class="mt- text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
-            CuBuyShop
+            CuBuySell
           </p>
           <p class="mt-3 max-w-4xl mx-auto text-xl leading-7 text-gray-300 sm:mt-5 sm:text-2xl sm:leading-8">
             Escoge el paquete que más se ajuste a tus deseos.
@@ -104,7 +104,7 @@ function Pricing() {
                   </div>
                   <div class="bg-white rounded-t-lg px-6 pt-12 pb-10">
                     <div>
-                      <h2 class="text-center text-3xl leading-9 font-semibold text-gray-900 sm:-mx-6">Growth</h2>
+                      <h2 class="text-center text-3xl leading-9 font-semibold text-gray-900 sm:-mx-6">Crecimiento</h2>
                       <div class="mt-4 flex items-center justify-center">
                         <span class="px-3 flex items-start text-6xl leading-none tracking-tight text-gray-900 sm:text-6xl">
                           <span class="mt-2 mr-2 text-4xl font-medium">$</span>
@@ -185,7 +185,7 @@ function Pricing() {
                   <div class="flex-1 flex flex-col">
                     <div class="bg-white px-6 py-10">
                       <div>
-                        <h2 class="text-center text-2xl leading-8 font-medium text-gray-900">Scale</h2>
+                        <h2 class="text-center text-2xl leading-8 font-medium text-gray-900">Escala</h2>
                         <div class="mt-4 flex items-center justify-center">
                           <span class="px-3 flex items-start text-6xl leading-none tracking-tight text-gray-900">
                             <span class="mt-2 mr-2 text-4xl font-medium">$</span>
