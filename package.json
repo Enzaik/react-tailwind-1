@@ -46,6 +46,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "enzyme": "^3.11.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.6",
