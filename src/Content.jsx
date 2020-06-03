@@ -81,14 +81,17 @@ function Content() {
       {/* <Landing2 /> */}
       {/* <Test /> */}
       {/* <Router> */}
-      <Switch>
-        <Route exact path="/houses">
-          <ListItems list={list} />
-        </Route>
-        <Route exact path="/nature">
-          <Pricing />
-        </Route>
-      </Switch>
+
+      <Route exact path="/">
+        <ListItems list={list} />
+      </Route>
+      <Route exact path="/houses">
+        <ListItems list={list} />
+      </Route>
+      <Route exact path="/pricing">
+        <Pricing />
+      </Route>
+
       {/* </Router> */}
     </div>
   );
