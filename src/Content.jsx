@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import ListItemHorizontal from './ListItemHorizontal';
 import ListItemVertical from './ListItemVertical';
@@ -16,28 +17,58 @@ function Content() {
   const list = [
     {
       url:
-        'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=',
+        'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      price: 80,
+      beds: 3,
+      baths: 2,
+      stars: 4,
+      description: 'Casa en las afueras de la ciudad',
     },
     {
       url:
         'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      price: 70,
+      beds: 3,
+      baths: 2,
+      stars: 4,
+      description: 'Casa en el centro de la ciudad',
     },
     {
       url:
         'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      price: 90,
+      beds: 3,
+      baths: 2,
+      stars: 4,
+      description: 'Casa con piscina',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=',
+        'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      price: 80,
+      beds: 3,
+      baths: 2,
+      stars: 4,
+      description: 'Pequeña casa confortable',
     },
 
     {
       url:
         'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      price: 60,
+      beds: 3,
+      baths: 2,
+      stars: 4,
+      description: 'Casa en las afueras de la ciudad',
     },
     {
       url:
-        'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+        'https://images.unsplash.com/photo-1560026301-88340cf16be7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+      price: 70,
+      beds: 3,
+      baths: 2,
+      stars: 4,
+      description: 'Casa en las afueras de la ciudad',
     },
   ];
   return (
@@ -49,7 +80,16 @@ function Content() {
       {/* <Pricing /> */}
       {/* <Landing2 /> */}
       {/* <Test /> */}
-      <ListItems list={list} />
+      {/* <Router> */}
+      <Switch>
+        <Route exact path="/houses">
+          <ListItems list={list} />
+        </Route>
+        <Route exact path="/nature">
+          <Pricing />
+        </Route>
+      </Switch>
+      {/* </Router> */}
     </div>
   );
 }

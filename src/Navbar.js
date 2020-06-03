@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import logo from './img/logo.svg';
 
 import Dropdown from './Dropdown';
@@ -36,30 +38,32 @@ function Navbar() {
               <img className="hidden lg:block h-8 w-auto" src={logo} alt="Workflow logo" />
             </div>
             <div className="hidden sm:ml-6 sm:flex">
-              <a
-                href="#"
+              <Link
+                to="/houses"
                 className="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out"
               >
-                Dashboard
-              </a>
-              <a
-                href="#"
+                Casas
+              </Link>
+              <Link
+                to="/nature"
                 className="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
               >
-                Team
-              </a>
-              <a
-                href="#"
+                Precios
+              </Link>
+              {/* <Link
+                to="/other"
                 className="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
               >
                 Projects
-              </a>
-              <a
-                href="#"
-                className="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
+              </Link>
+              <Link
+                to="/other1"
+                className="ml-8 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm
+                  font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none
+                  focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
               >
                 Calendar
-              </a>
+              </Link> */}
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -90,30 +94,30 @@ function Navbar() {
   --> */}
       <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
         <div className="pt-2 pb-4">
-          <a
-            href="#"
+          <Link
+            to="/houses"
             className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out"
           >
-            Dashboard
-          </a>
-          <a
-            href="#"
+            Casas
+          </Link>
+          <Link
+            to="/nature"
             className="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
           >
-            Team
-          </a>
-          <a
-            href="#"
+            Precios
+          </Link>
+          {/* <Link
+            to="/nature"
             className="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
           >
             Projects
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/nature"
             className="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
           >
             Calendar
-          </a>
+          </Link> */}
         </div>
       </div>
     </nav>
