@@ -71,28 +71,51 @@ function Content() {
       description: 'Casa en las afueras de la ciudad',
     },
   ];
+
+  const componentsConfig = [
+    {
+      component: 'Pricing',
+      path: '/pricing',
+      exact: true,
+    },
+    {
+      component: 'ListItems',
+      path: '/houses',
+      exact: true,
+    },
+    {
+      component: 'ListItems ',
+      path: '/',
+      exact: true,
+    },
+  ];
+
+  const renderComponent = (componentConfig) => {
+    switch (componentConfig.path) {
+      case '/pricing':
+        return (
+          <Route exact={componentConfig.exact} path={componentConfig.path}>
+            <Pricing />
+          </Route>
+        );
+      case '/houses':
+        return (
+          <Route exact={componentConfig.exact} path={componentConfig.path}>
+            <ListItems list={list} />
+          </Route>
+        );
+      default:
+        return (
+          <Route exact={false} path="/">
+            <ListItems list={list} />
+          </Route>
+        );
+    }
+  };
+
   return (
     <div class="max-w-screen mx-auto px-4 py-16 ">
-      {/* <ProgressBar /> */}
-      {/* <Header /> */}
-      {/* <Dropdown /> */}
-      {/* <Product /> */}
-      {/* <Pricing /> */}
-      {/* <Landing2 /> */}
-      {/* <Test /> */}
-      {/* <Router> */}
-
-      <Route exact path="/">
-        <ListItems list={list} />
-      </Route>
-      <Route exact path="/houses">
-        <ListItems list={list} />
-      </Route>
-      <Route exact path="/pricing">
-        <Pricing />
-      </Route>
-
-      {/* </Router> */}
+      {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
     </div>
   );
 }
