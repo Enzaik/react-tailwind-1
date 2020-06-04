@@ -18,8 +18,8 @@ function Dropdown() {
           aria-haspopup="true"
         >
           <img
-            class="h-8 w-8 rounded-full"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            class="h-8 w-8 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1590626448634-7a9f6e56bb39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
             alt=""
           />
         </button>
@@ -45,7 +45,6 @@ function Dropdown() {
               </a>
               <a
                 href="#"
-                onClick={() => alert('herr')}
                 className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900"
               >
                 Support
