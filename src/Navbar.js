@@ -22,12 +22,22 @@ function Navbar() {
             >
               {/* <!-- Icon when menu is closed. -->
           <!-- Menu open: "hidden", Menu closed: "block" --> */}
-              <svg className="block h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <svg
+                className={`${!isMobileMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               {/* <!-- Icon when menu is open. -->
           <!-- Menu open: "block", Menu closed: "hidden" --> */}
-              <svg className="hidden h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+              <svg
+                className={`${isMobileMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
+                stroke="currentColor"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -92,8 +102,12 @@ function Navbar() {
 
     Menu open: "block", Menu closed: "hidden"
   --> */}
-      <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} sm:hidden`}>
-        <div className="pt-2 pb-4">
+      <button
+        onClick={() => setIsMobileMenuOpen(false)}
+        className={` ${isMobileMenuOpen ? 'fixed' : 'hidden'} fixed top-0 left-0 bottom-0 right-0 h-full w-full `}
+      ></button>
+      <div className={`${isMobileMenuOpen ? 'absolute' : 'hidden'} absolute w-full bg-white sm:hidden`}>
+        <div className="pt-2 pb-4 ">
           <Link
             to="/houses"
             className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out"
