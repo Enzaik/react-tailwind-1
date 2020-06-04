@@ -86,7 +86,7 @@ function Content() {
     {
       component: 'ListItems ',
       path: '/',
-      exact: true,
+      exact: false,
     },
   ];
 
@@ -106,7 +106,7 @@ function Content() {
         );
       default:
         return (
-          <Route exact={false} path="/">
+          <Route exact={true} path="/">
             <ListItems list={list} />
           </Route>
         );
