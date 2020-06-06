@@ -11,22 +11,22 @@ import {
   Configure,
 } from 'react-instantsearch-dom';
 
+import CustomSearchBox from './CustomSearchBox';
+
 const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
 
 function ListItems() {
   return (
-    <div class="bg-white  rounded-lg overflow-hidden max-w-4xl max-h-xl mx-auto my-4 shadow-xl hover:cursor-pointer">
-      <InstantSearch indexName="houses" searchClient={searchClient}>
-        <SearchBox className="border w-11/12" />
-        <Hits hitComponent={Hit} />
-      </InstantSearch>
-    </div>
+    <InstantSearch indexName="houses" searchClient={searchClient}>
+      <CustomSearchBox className="" />
+      <Hits hitComponent={Hit || <div>empty</div>} />
+    </InstantSearch>
   );
 }
 
 function Hit({ hit }) {
   return (
-    <div>
+    <div className="bg-white  rounded-lg overflow-hidden max-w-xl max-h-xl mx-auto my-4 shadow-xl hover:cursor-pointer">
       <div class="relative pb-2/3">
         <img className="absolute h-full w-full object-cover" src={hit.url} />
       </div>
@@ -40,7 +40,7 @@ function Hit({ hit }) {
           </div>
         </div>
         <h4 class="mt-1 font-semibold text-lg leading-tight truncate">
-          <Highlight attribute="description" hit={hit} />
+          <Highlight attribute="description" hit={hit} tagName="mark" />
         </h4>
         <div class="mt-1">
           ${hit.price}
