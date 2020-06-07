@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import logo from './img/logo.svg';
 
 import Dropdown from './Dropdown';
+import RangeInput from './RangeInput';
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

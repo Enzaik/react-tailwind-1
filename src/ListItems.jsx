@@ -1,7 +1,6 @@
 import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import {
-  InstantSearch,
   Hits,
   SearchBox,
   Pagination,
@@ -20,7 +19,7 @@ const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e
 
 function ListItems() {
   return (
-    <InstantSearch indexName="houses" searchClient={searchClient}>
+    <>
       <CustomSearchBox />
       <Hits className="mt-20" hitComponent={Hit} />
       <div className="fixed top-40 left-10 lg:left-56">
@@ -28,13 +27,13 @@ function ListItems() {
           <CustomRefinementList attribute="beds" searchable />
         </div>
       </div>
-    </InstantSearch>
+    </>
   );
 }
 
 function Hit({ hit }) {
   return (
-    <div className="bg-white  rounded-lg overflow-hidden max-w-xl max-h-xl mx-auto my-4 shadow-xl hover:cursor-pointer">
+    <div className="bg-white rounded-lg overflow-hidden max-w-xl mx-2 max-h-xl sm:mx-auto my-4 shadow-xl hover:cursor-pointer">
       <div class="relative pb-2/3">
         <img className="absolute h-full w-full object-cover" src={hit.url} />
       </div>

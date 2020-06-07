@@ -5,7 +5,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
   const [value, setValue] = useState('');
 
   return (
-    <div className="fixed w-full z-10 mx-auto px-1/4 ">
+    <div className="fixed w-full z-10 mx-auto px-2 sm:px-1/4 ">
       <div className="relative flex justify-between h-14">
         <div className="absolute w-full inset-y-0 left-0 flex items-center ">
           <form noValidate action="" role="search" className="relative mt-5 w-full mx-auto">

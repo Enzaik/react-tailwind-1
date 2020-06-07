@@ -3,7 +3,7 @@ import { Highlight, connectRefinementList } from 'react-instantsearch-dom';
 import RangeInput from './RangeInput';
 
 const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL, attribute }) => (
-  <div>
+  <div className="hidden md:block">
     <ul>
       {items.map((item) => {
         return (
