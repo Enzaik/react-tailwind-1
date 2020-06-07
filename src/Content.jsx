@@ -68,7 +68,7 @@ function Content() {
   };
 
   return (
-    <div class="max-w-screen mx-auto px-4 py-16 ">
+    <div class="max-w-screen mx-auto  py-16 ">
       {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
     </div>
   );
