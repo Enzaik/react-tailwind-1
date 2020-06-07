@@ -1,5 +1,6 @@
 import React from 'react';
-import { Highlight, connectRefinementList, RangeInput } from 'react-instantsearch-dom';
+import { Highlight, connectRefinementList } from 'react-instantsearch-dom';
+import RangeInput from './RangeInput';
 
 const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL, attribute }) => (
   <div>

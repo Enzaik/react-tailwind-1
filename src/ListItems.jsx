@@ -9,12 +9,11 @@ import {
   ClearRefinements,
   RefinementList,
   Configure,
-  RangeInput,
 } from 'react-instantsearch-dom';
 
 import CustomSearchBox from './CustomSearchBox';
 import CustomRefinementList from './CustomRefinedList';
-import CustomRangeSlider from './RangeSlider';
+import CustomRangeSlider from './RangeInput';
 import CustomAutocomplete from './Autocomplete';
 
 const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
