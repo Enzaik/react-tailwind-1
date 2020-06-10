@@ -34,8 +34,8 @@ function Dropdown() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <div className="z-10 origin-top-right ml-22 absolute right-0 mt-2 w-56 rounded-md shadow-lg">
-          <div className=" z-10 rounded-md bg-white shadow-xs">
+        <div className="z-20 origin-top-right ml-22 absolute right-0 mt-2 w-56 rounded-md shadow-lg">
+          <div className=" z-20 rounded-md bg-white shadow-xs">
             <div className="py-1">
               <a
                 href="#"

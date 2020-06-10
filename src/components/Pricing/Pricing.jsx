@@ -16,7 +16,7 @@ function Pricing() {
       </div>
 
       <div class="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
-        <div class="relative z-0">
+        <div class="relative z-20">
           <div class="absolute inset-0 h-5/6 bg-gray-900 lg:h-2/3"></div>
           <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="relative lg:grid lg:grid-cols-7">
@@ -92,7 +92,7 @@ function Pricing() {
                 </div>
               </div>
               <div class="mt-10 max-w-lg mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-4">
-                <div class="relative z-10 rounded-lg shadow-xl">
+                <div class="relative z-20 rounded-lg shadow-xl">
                   <div class="pointer-events-none absolute inset-0 rounded-lg border-2 border-indigo-600"></div>
                   <div class="absolute inset-x-0 top-0 transform translate-y-px">
                     <div class="flex justify-center transform -translate-y-1/2">
