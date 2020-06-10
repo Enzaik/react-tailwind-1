@@ -12837,6 +12837,22 @@ video {
   font-family: Libre Franklin;
 }
 
+.font-asap {
+  font-family: Asap;
+}
+
+.font-nunito {
+  font-family: Nunito;
+}
+
+.font-ebgaramond {
+  font-family: EB Garamond;
+}
+
+.font-inter {
+  font-family: Inter;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -34684,6 +34700,11 @@ video {
   transition-delay: 1000ms;
 }
 
+.fit-content {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
@@ -46637,6 +46658,22 @@ video {
 
   .sm\:font-librefranklin {
     font-family: Libre Franklin;
+  }
+
+  .sm\:font-asap {
+    font-family: Asap;
+  }
+
+  .sm\:font-nunito {
+    font-family: Nunito;
+  }
+
+  .sm\:font-ebgaramond {
+    font-family: EB Garamond;
+  }
+
+  .sm\:font-inter {
+    font-family: Inter;
   }
 
   .sm\:font-hairline {
@@ -80442,6 +80479,22 @@ video {
     font-family: Libre Franklin;
   }
 
+  .md\:font-asap {
+    font-family: Asap;
+  }
+
+  .md\:font-nunito {
+    font-family: Nunito;
+  }
+
+  .md\:font-ebgaramond {
+    font-family: EB Garamond;
+  }
+
+  .md\:font-inter {
+    font-family: Inter;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -114245,6 +114298,22 @@ video {
     font-family: Libre Franklin;
   }
 
+  .lg\:font-asap {
+    font-family: Asap;
+  }
+
+  .lg\:font-nunito {
+    font-family: Nunito;
+  }
+
+  .lg\:font-ebgaramond {
+    font-family: EB Garamond;
+  }
+
+  .lg\:font-inter {
+    font-family: Inter;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -148046,6 +148115,22 @@ video {
 
   .xl\:font-librefranklin {
     font-family: Libre Franklin;
+  }
+
+  .xl\:font-asap {
+    font-family: Asap;
+  }
+
+  .xl\:font-nunito {
+    font-family: Nunito;
+  }
+
+  .xl\:font-ebgaramond {
+    font-family: EB Garamond;
+  }
+
+  .xl\:font-inter {
+    font-family: Inter;
   }
 
   .xl\:font-hairline {

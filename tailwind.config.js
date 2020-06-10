@@ -8,6 +8,10 @@ module.exports = {
         raleway: 'Raleway',
         hindsiliguri: 'Hind Siliguri',
         librefranklin: 'Libre Franklin',
+        asap: 'Asap',
+        nunito: 'Nunito',
+        ebgaramond: 'EB Garamond',
+        inter: 'Inter',
       },
       colors: {
         skyblue: {
