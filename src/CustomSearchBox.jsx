@@ -39,7 +39,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
     >
-      <div className={`fixed w-full z-10 mx-auto px-2 mt-0 top-14 sm:px-1/4 `}>
+      <div className={`fixed w-full z-1 mx-auto px-2 mt-0 top-14 sm:px-1/4 `}>
         <div className="relative flex justify-between h-14">
           <div className="absolute w-full inset-y-0 left-0 flex items-center ">
             <form noValidate action="" role="search" className="relative mt-5 w-full mx-auto">

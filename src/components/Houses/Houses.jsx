@@ -14,7 +14,6 @@ import CustomSearchBox from '../../CustomSearchBox';
 import CustomRefinementList from '../../CustomRefinedList';
 import CustomRangeSlider from '../../RangeInput';
 import CustomAutocomplete from '../../Autocomplete';
-import House from './House';
 import Navbar from '../Navbar/Navbar';
 
 import CustomHits from '../../CustomHits';
@@ -52,7 +51,7 @@ function Houses() {
           {/* <!-- Replace with your content --> */}
           <div class="px-4 py-4 sm:px-0">
             <div class="border-gray-200 rounded-lg ">
-              <div class="grid gap-5 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-none">
+              <div class="grid gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-none">
                 <CustomHits />
               </div>
             </div>
