@@ -169,7 +169,7 @@ function Landing() {
                 <span className="text-indigo-600"> nunca fue tan fácil</span>
               </h2>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Gracias al Live Search de CuBuySell, encuentras lo que que andas buscando más rapido que nunca
+                Gracias al Live Search de CuBuySell, encuentras lo que que andas buscando más rápido que nunca
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
