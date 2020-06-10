@@ -2,13 +2,15 @@ import React from 'react';
 import { Highlight, connectRefinementList } from 'react-instantsearch-dom';
 import RangeInput from './RangeInput';
 
+import './App.css';
+
 const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL, attribute }) => (
-  <div className="hidden md:block">
+  <div className="hidden sm:block p-4">
     <ul>
       {items.map((item) => {
         return (
-          <li key={item.label}>
-            <div class="absolute flex items-center h-5">
+          <li key={item.label} className="w-32">
+            <div class="absolute flex items-center">
               <input
                 onClick={(event) => {
                   refine(item.value);

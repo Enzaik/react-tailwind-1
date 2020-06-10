@@ -30,9 +30,9 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
   };
 
   return (
-    <form className="flex mt-2 ">
+    <form className="flex flex-initial mt-2 ">
       <input
-        className=""
+        className="shadow-inner rounded-lg bg-gray-100 pl-1"
         type="number"
         placeholder={min}
         min={min}
@@ -48,7 +48,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
       />
       {' - '}
       <input
-        className=""
+        className="shadow-inner rounded-lg bg-gray-100 pl-1"
         type="number"
         placeholder={max}
         min={min}
@@ -63,7 +63,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
         }
       />
       <button
-        className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+        className="inline-flex items-center ml-2 px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded-lg text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition ease-in-out duration-150"
         onClick={handleRefinement}
       >
         OK

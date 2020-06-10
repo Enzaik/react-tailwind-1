@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.fit-content {
+  width: fit-content;
+}

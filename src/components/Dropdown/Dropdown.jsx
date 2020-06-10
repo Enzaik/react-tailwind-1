@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Transition from './Transition';
+import Transition from '../../Transition';
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
