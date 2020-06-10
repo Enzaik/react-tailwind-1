@@ -95,7 +95,7 @@ function App() {
         return (
           <Route exact={true} path="/">
             <InstantSearch indexName="houses" searchClient={searchClient}>
-              <Houses />
+              <Landing />
             </InstantSearch>
           </Route>
         );
