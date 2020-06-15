@@ -17,7 +17,7 @@ function Filters({ items, isFromSearch, refine, searchForItems, createURL, attri
     // >
     <div
       className={`${
-        isOpen ? 'block' : 'hidden'
+        isOpen && shouldShowBar ? 'block' : 'hidden'
       } bg-gray-800 text-gray-300 w-full z-10 mx-auto px-2 pb-4 mt-0 border-t-2 border-gray-900`}
     >
       <label>

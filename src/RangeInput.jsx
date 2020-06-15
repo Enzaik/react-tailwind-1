@@ -32,13 +32,13 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
   return (
     <form className="flex flex-initial mt-2 ">
       <input
-        className="shadow-inner rounded-lg bg-gray-100 pl-1"
+        className="form-input block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
         type="number"
         placeholder={min}
         min={min}
         max={max}
         step={1 / Math.pow(10, precision)}
-        value={refinement.min}
+        // value={refinement.min}
         onChange={(event) => {
           setRefinement({
             ...refinement,
@@ -48,13 +48,13 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
       />
       {' - '}
       <input
-        className="shadow-inner rounded-lg bg-gray-100 pl-1"
+        className="form-input block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
         type="number"
         placeholder={max}
         min={min}
         max={max}
         step={1 / Math.pow(10, precision)}
-        value={refinement.max}
+        // value={refinement.max}
         onChange={(event) =>
           setRefinement({
             ...refinement,

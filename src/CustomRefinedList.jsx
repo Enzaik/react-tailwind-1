@@ -8,11 +8,11 @@ const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL
   console.log(items);
 
   return (
-    <div className="hidden sm:block p-4">
+    <div className="p-4">
       <ul>
         {items.map((item) => {
           return (
-            <li key={item.label} className="w-32">
+            <li key={item.label} className="flex items-center w-32">
               <div class="absolute flex items-center">
                 <input
                   onClick={(event) => {
