@@ -1,16 +1,5 @@
 module.exports = {
-  purge: {
-    mode: 'all',
-    content: [
-      './src/**/*.jsx',
-      './src/**/*.js',
-      './src/*.jsx',
-      './src/*.js',
-      './node_modules/**/*.js',
-      './node_modules/next/dist/pages/**/*.ts',
-      './node_modules/pikaday/pikaday.js',
-    ],
-  },
+  purge: ['./src/**/*.jsx'],
   theme: {
     extend: {
       fontFamily: {

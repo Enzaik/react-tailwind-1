@@ -39,7 +39,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
     >
-      <div className="fixed w-full z-10 mx-auto px-2 mt-0 top-14 sm:px-1/4">
+      <div className="fixed bg-gray-800 w-full z-10 mx-auto px-2 pb-4 mt-0 top-14 sm:px-1/4">
         <div className="relative flex justify-between h-14">
           <div className="absolute w-full inset-y-0 left-0 flex items-center ">
             <form noValidate action="" role="search" className="relative mt-5 w-full mx-auto">
@@ -84,7 +84,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
                   </button>
                 </div>
                 <div class="absolute inset-y-0 right-0 pr-1 flex items-center pointer-events-none">
-                  {value && (
+                  {/* {value && (
                     <button
                       className="inline-flex items-center  px-2 py-1.5 border border-transparent text-xs leading-4 font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-50 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo active:bg-indigo-200 transition ease-in-out duration-150"
                       onClick={(e) => {
@@ -94,7 +94,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
                     >
                       X
                     </button>
-                  )}
+                  )} */}
                 </div>
               </div>
               {isSearchStalled ? <div className="px-2">Buscando...</div> : ''}
