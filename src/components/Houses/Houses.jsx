@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import algoliasearch from 'algoliasearch/lite';
 import {
   Hits,
@@ -15,17 +15,47 @@ import CustomRefinementList from '../../CustomRefinedList';
 import CustomRangeSlider from '../../RangeInput';
 import CustomAutocomplete from '../../Autocomplete';
 import Navbar from '../Navbar/Navbar';
-
+import Filters from '../Filters/Filters';
 import CustomHits from '../../CustomHits';
 
-const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
+import Transition from '../../Transition';
 
 function Houses() {
+  const [isOpen, setIsOpen] = useState(false);
+  const prevScrollY = useRef(0);
+  const [goingUp, setGoingUp] = useState(true);
+
+  const filterHandler = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (prevScrollY.current < currentScrollY && goingUp) {
+        setGoingUp(false);
+      }
+      if (prevScrollY.current > currentScrollY && !goingUp) {
+        setGoingUp(true);
+      }
+
+      prevScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [goingUp]);
+
+  let shouldShowBar = goingUp || window.scrollY === 0;
+
   return (
     <div>
       <div className="fixed w-full z-10">
         <Navbar />
-        <CustomSearchBox />
+        <CustomSearchBox filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
+        <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
       </div>
       <main>
         <div class="max-w-7xl h-screen mx-auto py-6 sm:px-6 lg:px-8">
