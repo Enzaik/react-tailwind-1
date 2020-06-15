@@ -80,7 +80,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
                         fill="currentColor"
                       />
                     </svg>
-                    Filters
+                    Filtros
                   </button>
                 </div>
                 <div class="absolute inset-y-0 right-0 pr-1 flex items-center pointer-events-none">
