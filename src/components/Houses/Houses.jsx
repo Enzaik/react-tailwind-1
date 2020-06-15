@@ -22,30 +22,11 @@ const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e
 
 function Houses() {
   return (
-    // <div className="relative">
-    //   <CustomSearchBox />
-    //   <div className="pt-14 mx-auto max-w-screen-xl sm:px-10 mx-auto my-4">
-    //     <header>
-    //       <h1 class="text-md sm:text-xl font-semibold text-gray-600 leading-tight">Casas</h1>
-    //     </header>
-    //     <div className="flex mt-2">
-    //       <div className="absolute fit-content bg-white -mt-60 w-full sm:sticky sm:top-28 sm:mt-0 sm:w-64 rounded-lg shadow-xl">
-    //         <div className="flex">
-    //           <CustomRefinementList attribute="beds" searchable />
-    //         </div>
-    //       </div>
-    //       <CustomHits className="" hitComponent={House} />
-    //     </div>
-    //   </div>
-    // </div>
     <div>
-      <Navbar />
-      <header class="bg-gray-800 shadow-sm mt-16 pb-2">
-        <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-          <h1 class="text-lg leading-6 font-semibold text-gray-900">Casas</h1>
-        </div>
+      <div className="fixed w-full z-10">
+        <Navbar />
         <CustomSearchBox />
-      </header>
+      </div>
       <main>
         <div class="max-w-7xl h-screen mx-auto py-6 sm:px-6 lg:px-8">
           {/* <!-- Replace with your content --> */}
