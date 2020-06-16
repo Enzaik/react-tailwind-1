@@ -17,6 +17,7 @@ import CustomAutocomplete from '../../Autocomplete';
 import Navbar from '../Navbar/Navbar';
 import Filters from '../Filters/Filters';
 import CustomHits from '../../CustomHits';
+import MainContent from '../../MainContent';
 
 import Transition from '../../Transition';
 
@@ -33,6 +34,7 @@ function Houses() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+
       if (prevScrollY.current < currentScrollY && goingUp) {
         setGoingUp(false);
       }
@@ -57,19 +59,7 @@ function Houses() {
         <CustomSearchBox filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
         <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
       </div>
-      <main>
-        <div class="max-w-7xl h-screen mx-auto py-6 sm:px-6 lg:px-8">
-          {/* <!-- Replace with your content --> */}
-          <div class="px-4 py-4 sm:px-0">
-            <div class="border-gray-200 rounded-lg ">
-              <div class="grid gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-none">
-                <CustomHits />
-              </div>
-            </div>
-          </div>
-          {/* <!-- /End replace --> */}
-        </div>
-      </main>
+      <MainContent />
     </div>
   );
 }

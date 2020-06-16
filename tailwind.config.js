@@ -37,6 +37,9 @@ module.exports = {
           900: '#005f5f',
         },
       },
+      spacing: {
+        content: '10rem',
+      },
     },
   },
   variants: {
