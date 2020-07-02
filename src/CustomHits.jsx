@@ -1,11 +1,14 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import { Configure, Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
 function Hit({ hit }) {
   return (
     <div className="bg-white rounded-lg overflow-hidden sm:mx-2 shadow-xl hover:cursor-pointer sm:w-25">
       <div class="relative pb-48">
-        <img className="absolute h-48 w-full object-cover" src={hit.url} />
+        <LazyLoad>
+          <img className="absolute h-48 w-full object-cover" src={hit.url} />
+        </LazyLoad>
       </div>
       <div class="p-4">
         <div className="flex items-baseline">
