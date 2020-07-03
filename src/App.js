@@ -62,7 +62,6 @@ function App() {
       case '/pricing':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
-            <Navbar />
             <InstantSearch indexName="houses" searchClient={searchClient}>
               <Pricing />
             </InstantSearch>

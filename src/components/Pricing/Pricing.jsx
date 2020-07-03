@@ -1,9 +1,14 @@
 import React from 'react';
 
+import Navbar from '../Navbar/Navbar';
+
 function Pricing() {
   return (
-    <div class=" font-hindsiliguri bg-gray-900">
-      <div class="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
+    <div className=" bg-gray-900">
+      <div className="fixed w-full z-30">
+        <Navbar />
+      </div>
+      <div class="font-hindsiliguri max-w-7xl pt-content mx-auto  py-6 sm:px-6 lg:px-8">
         <div class="text-center">
           <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider"></h2>
           <p class="font-montserrat font-semibold text-3xl leading-9  text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
@@ -15,7 +20,7 @@ function Pricing() {
         </div>
       </div>
 
-      <div class="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
+      <div class=" font-hindsiligurimt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
         <div class="relative z-20">
           <div class="absolute inset-0 h-5/6 bg-gray-900 lg:h-2/3"></div>
           <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
