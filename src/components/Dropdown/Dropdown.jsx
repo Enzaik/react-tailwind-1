@@ -12,13 +12,13 @@ function Dropdown() {
       <span className="rounded-md shadow-sm">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          class="max-w-xs flex items-center text-sm rounded-full focus:outline-none focus:shadow-outline"
+          className="max-w-xs flex items-center text-sm rounded-full focus:outline-none focus:shadow-outline"
           id="user-menu"
           aria-label="User menu"
           aria-haspopup="true"
         >
           <img
-            class="h-8 w-8 rounded-full object-cover"
+            className="h-8 w-8 rounded-full object-cover"
             src="https://images.unsplash.com/photo-1590626448634-7a9f6e56bb39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
             alt=""
           />

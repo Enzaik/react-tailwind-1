@@ -40,7 +40,7 @@ class Search extends Component {
 
 function Hit({ hit }) {
   return (
-    <div class="relative flex max-w-5xl bg-white my-4 border-b border-gray-200 overflow-hidden rounded-lg shadow-md sm:shadow-xl mx-auto hover:cursor-pointer">
+    <div className="relative flex max-w-5xl bg-white my-4 border-b border-gray-200 overflow-hidden rounded-lg shadow-md sm:shadow-xl mx-auto hover:cursor-pointer">
       <img className="h-32 w-32 object-cover" src={hit.url} />
       <div className="p6 mr-16">
         <div className="">

@@ -30,9 +30,9 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
   };
 
   return (
-    <form className="flex flex-initial mt-2 ">
+    <form className="flex flex-initial items-end mt-2 sm:ml-5 ">
       <input
-        className="form-input block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
+        className="form-input block bg-gray-900 text-white border-none pl-10 h-1/4 mr-2 sm:text-sm"
         type="number"
         placeholder={min}
         min={min}
@@ -48,7 +48,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
       />
       {' - '}
       <input
-        className="form-input block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
+        className="form-input block bg-gray-900 text-white border-none pl-10 h-1/4 mr-2 sm:text-sm"
         type="number"
         placeholder={max}
         min={min}
@@ -63,7 +63,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
         }
       />
       <button
-        className="inline-flex items-center ml-2 px-2.5 py-1.5 border border-transparent text-xs leading-4 font-medium rounded-lg text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition ease-in-out duration-150"
+        className="inline-flex items-center ml-2 px-2.5 py-1.5 h-1/4 border border-transparent text-xs leading-4 font-medium rounded-lg text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green active:bg-green-700 transition ease-in-out duration-150"
         onClick={handleRefinement}
       >
         OK
