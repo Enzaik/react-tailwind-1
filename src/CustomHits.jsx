@@ -4,7 +4,7 @@ import { Configure, Highlight, connectHits, connectHitInsights } from 'react-ins
 
 function Hit({ hit }) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden sm:mx-2 shadow-xl hover:cursor-pointer sm:w-25">
+    <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-xl hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
         <LazyLoad>
           <img className="absolute h-48 w-full object-cover" src={hit.url} />
