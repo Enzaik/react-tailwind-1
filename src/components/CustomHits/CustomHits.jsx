@@ -3,6 +3,7 @@ import LazyLoad from 'react-lazyload';
 import { Configure, Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
 function Hit({ hit }) {
+  //@TODO: refactor to make generic
   return (
     <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-xl hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">

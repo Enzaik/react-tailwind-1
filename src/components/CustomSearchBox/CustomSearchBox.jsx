@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connectSearchBox } from 'react-instantsearch-dom';
 
-import Transition from './Transition';
+import Transition from '../../Transition';
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, shouldShowBar }) => {
   return (

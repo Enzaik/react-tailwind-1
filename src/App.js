@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import { InstantSearch } from 'react-instantsearch-dom';
 
 import ListItemHorizontal from './ListItemHorizontal';
-import Houses from './components/Houses/Houses';
+import Houses from './pages/Houses/HousesPage';
 import Search from './Search';
 import Pricing from './components/Pricing/Pricing';
 import Landing from './components/Landing/Landing';
@@ -46,25 +46,12 @@ function App() {
     },
   ];
 
-  const createComponentFactory = (componentConfig, isSearchable, props) => {
-    return (
-      <Route exact={componentConfig.exact} path={componentConfig.path}>
-        <InstantSearch indexName={componentConfig.index} searchClient={searchClient}>
-          <Navbar />
-          <Pricing />
-        </InstantSearch>
-      </Route>
-    );
-  };
-
   const renderComponent = (componentConfig) => {
     switch (componentConfig.path) {
       case '/pricing':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
-            <InstantSearch indexName="houses" searchClient={searchClient}>
-              <Pricing />
-            </InstantSearch>
+            <Pricing />
           </Route>
         );
       case '/houses':
