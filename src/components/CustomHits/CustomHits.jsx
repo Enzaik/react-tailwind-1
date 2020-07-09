@@ -39,11 +39,11 @@ function Hit({ hit }) {
 const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
 const Hits = ({ hits }) => (
-  <>
+  <div className="grid gap-2 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-none">
     {hits.map((hit) => (
       <HitWithInsights key={hit.objectID} hit={hit} />
     ))}
-  </>
+  </div>
 );
 
 const CustomHits = connectHits(Hits);

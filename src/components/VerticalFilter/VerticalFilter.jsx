@@ -6,7 +6,7 @@ const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL
   console.log(items);
 
   return (
-    <div className=" hidden md:block">
+    <div className=" hidden md:fixed">
       <ul>
         {items.map((item) => {
           return (
