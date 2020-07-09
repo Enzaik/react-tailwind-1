@@ -9,7 +9,7 @@ import ListItemHorizontal from './ListItemHorizontal';
 import Houses from './pages/Houses/HousesPage';
 import Search from './Search';
 import Pricing from './components/Pricing/Pricing';
-import Landing from './components/Landing/Landing';
+import Landing from './pages/Landing/LandingPage';
 import Header from './Header';
 import Dropdown from './components/Dropdown/Dropdown';
 import Popup from './Popup';
