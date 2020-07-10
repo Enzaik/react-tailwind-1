@@ -1,7 +1,11 @@
 import React from 'react';
 import algoliasearch from 'algoliasearch/lite';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  // BrowserRouter as Router, Switch,
+  Route,
+  // Link
+} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import { InstantSearch } from 'react-instantsearch-dom';
 

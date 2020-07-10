@@ -5,8 +5,6 @@ import RangeInput from './RangeInput';
 import './App.css';
 
 const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL, attribute }) => {
-  console.log(items);
-
   return (
     <div className="sm:flex">
       <ul>

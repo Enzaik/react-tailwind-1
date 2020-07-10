@@ -7,3 +7,8 @@
 .fit-content {
   width: fit-content;
 }
+
+.sticky {
+  position: sticky;
+  align-self: flex-start;
+}

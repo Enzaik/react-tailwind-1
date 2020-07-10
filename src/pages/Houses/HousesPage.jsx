@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 
-import CustomSearchBox from '../../components/CustomSearchBox/CustomSearchBox';
+import SearchInput from '../../components/SearchInput/SearchInput';
 import Navbar from '../../components/Navbar/Navbar';
 import Filters from '../../components/Filters/Filters';
 const Houses = lazy(() => import('../../components/Houses/Houses'));
@@ -40,7 +40,7 @@ function HousesComponent() {
     <div>
       <div className="fixed w-full z-10">
         <Navbar />
-        <CustomSearchBox filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
+        <SearchInput filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
         <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
       </div>
       <Suspense fallback={<div>Loading...</div>}>
