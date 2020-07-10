@@ -5,16 +5,16 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import { InstantSearch } from 'react-instantsearch-dom';
 
-import ListItemHorizontal from './ListItemHorizontal';
+// import ListItemHorizontal from './ListItemHorizontal';
 import Houses from './pages/Houses/HousesPage';
 import Search from './Search';
 import Pricing from './components/Pricing/Pricing';
 import Landing from './pages/Landing/LandingPage';
-import Header from './Header';
-import Dropdown from './components/Dropdown/Dropdown';
-import Popup from './Popup';
-import Product from './Product';
-import Test from './Test';
+// import Header from './Header';
+// import Dropdown from './components/Dropdown/Dropdown';
+// import Popup from './Popup';
+// import Product from './Product';
+// import Test from './Test';
 
 function App() {
   const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
