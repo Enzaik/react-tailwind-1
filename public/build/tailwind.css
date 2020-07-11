@@ -34933,7 +34933,15 @@ video {
 }
 
 .margin-filter {
-  margin-left: 208px;
+  margin-left: 240px;
+}
+
+.width-left-panel {
+  width: 240px;
+}
+
+.pt-panel {
+  padding-top: 60px;
 }
 
 @media (min-width: 640px) {
