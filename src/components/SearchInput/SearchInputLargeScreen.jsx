@@ -14,7 +14,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
     >
-      <div className=" bg-gray-800 w-full z-10 mx-auto px-2 pb-4 mt-0 sm:px-1/4">
+      <div className=" bg-white w-full z-10 mx-auto px-2 pb-4 mt-0 sm:px-1/4">
         <div className="relative flex justify-between h-14">
           <div className="absolute w-full inset-y-0 left-0 flex">
             <form noValidate action="" role="search" className="relative mt-5 w-full mx-auto">
@@ -30,7 +30,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
                   </svg>
                 </div>
                 <input
-                  className="form-input block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
+                  className="form-input block bg-gray-200 text-gray-600 border-none pl-10 w-full mr-2 sm:text-sm"
                   placeholder="Buscar casas..."
                   type="search"
                   value={currentRefinement}
@@ -38,27 +38,6 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
                     refine(event.currentTarget.value);
                   }}
                 />
-                <button
-                  onClick={filterHandler}
-                  className="inline-flex items-center px-2.5 bg-gray-700 text-gray-100 rounded-md hover:bg-gray-600 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-gray-600 transition ease-in-out duration-150"
-                >
-                  <svg
-                    className="text-gray-500 mr-1 "
-                    width="18"
-                    height="14"
-                    stroke="currentColor"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M0 1a1 1 0 011-1h16a1 1 0 110 2H1a1 1 0 01-1-1zm3 6a1 1 0 011-1h10a1 1 0 110 2H4a1 1 0 01-1-1zm4 5a1 1 0 100 2h4a1 1 0 100-2H7z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  Filtros
-                </button>
               </div>
 
               {isSearchStalled ? <div className="px-2">Buscando...</div> : ''}

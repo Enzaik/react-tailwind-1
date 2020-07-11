@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Navbar from '../Navbar/Navbar';
+import CleanNavbar from '../Navbar/CleanNavbar';
 
 function Pricing() {
   return (
     <div className=" bg-gray-900">
       <div className="fixed w-full z-30">
-        <Navbar />
+        <CleanNavbar />
       </div>
       <div className="font-hindsiliguri max-w-7xl pt-content mx-auto  py-6 sm:px-6 lg:px-8">
         <div className="text-center">

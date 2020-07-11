@@ -6,9 +6,9 @@ import logo from '../../img/logo.svg';
 
 import Dropdown from '../Dropdown/Dropdown';
 import RangeInput from '../../RangeInput';
-import SearchInputLargeScreen from '../../components/SearchInput/SearchInputLargeScreen';
+import SearchInputLargeScreen from '../SearchInput/SearchInputLargeScreen';
 
-function Navbar(filterHandler = null, shouldShowBar = null) {
+function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <nav className="bg-gray-900 shadow z-20 top-0 xl:bg-white">
@@ -49,10 +49,6 @@ function Navbar(filterHandler = null, shouldShowBar = null) {
               <img className="block lg:hidden h-8 w-auto" src={logo} alt="Workflow logo" />
               <img className="hidden lg:block h-8 w-auto" src={logo} alt="Workflow logo" />
             </div>
-
-            {filterHandler && shouldShowBar && (
-              <SearchInputLargeScreen filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
-            )}
 
             <div className="hidden sm:ml-6 sm:flex">
               <Link

@@ -39,7 +39,7 @@ function HousesComponent() {
   return (
     <div className="h-screen">
       <div className="fixed w-full z-10">
-        <Navbar />
+        <Navbar filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
         <div className="md:hidden">
           <SearchInput filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
           <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
