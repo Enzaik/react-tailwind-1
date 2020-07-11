@@ -34932,6 +34932,10 @@ video {
   align-self: flex-start;
 }
 
+.margin-filter {
+  margin-left: 208px;
+}
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;

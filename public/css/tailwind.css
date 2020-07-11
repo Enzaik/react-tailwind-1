@@ -12,3 +12,7 @@
   position: sticky;
   align-self: flex-start;
 }
+
+.margin-filter {
+  margin-left: 208px;
+}

@@ -37,11 +37,13 @@ function HousesComponent() {
   let shouldShowBar = goingUp || window.scrollY === 0;
 
   return (
-    <div>
+    <div className="h-screen">
       <div className="fixed w-full z-10">
         <Navbar />
-        <SearchInput filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
-        <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
+        <div className="md:hidden">
+          <SearchInput filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
+          <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
+        </div>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
         <Houses />
