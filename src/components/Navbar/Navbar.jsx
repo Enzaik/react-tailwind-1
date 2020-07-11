@@ -11,7 +11,7 @@ import SearchInputLargeScreen from '../../components/SearchInput/SearchInputLarg
 function Navbar(filterHandler = null, shouldShowBar = null) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="bg-gray-900 shadow z-20 top-0 xl:bg-white">
+    <nav className="bg-gray-900 shadow z-20 top-0 md:bg-white">
       <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
