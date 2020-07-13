@@ -99,7 +99,7 @@ function Navbar(filterHandler = null, shouldShowBar = null) {
         onClick={() => setIsMobileMenuOpen(false)}
         className={` ${isMobileMenuOpen ? 'fixed' : 'hidden'} fixed top-0 left-0 bottom-0 right-0 h-full w-full `}
       ></button>
-      <div className={`${isMobileMenuOpen ? 'absolute' : 'hidden'} absolute w-full bg-white sm:hidden`}>
+      <div className={`${isMobileMenuOpen ? 'absolute' : 'hidden'} absolute w-full bg-white sm:hidden z-20`}>
         <div className="pt-2 pb-4 ">
           <Link
             to="/houses"

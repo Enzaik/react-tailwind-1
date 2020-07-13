@@ -14,10 +14,10 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
     >
-      <div className="hidden md:block bg-white w-full z-10 mx-auto px-2 pb-4 mt-0 sm:px-1/4">
-        <div className="relative flex justify-between h-14">
+      <div className="hidden md:block bg-white w-full z-10 mx-auto px-2 mt-0 sm:px-1/4">
+        <div className="relative flex justify-between h-full">
           <div className="absolute w-full inset-y-0 left-0 flex">
-            <form noValidate action="" role="search" className="relative mt-5 w-full mx-auto">
+            <form noValidate action="" role="search" className="relative my-auto w-full mx-auto">
               <div className="flex">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
