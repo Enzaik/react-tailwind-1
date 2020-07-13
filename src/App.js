@@ -93,7 +93,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-100 text-gray-900 font-inter antialiased">
+    <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
       {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
     </div>
   );
