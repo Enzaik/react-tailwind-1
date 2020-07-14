@@ -236,7 +236,7 @@ function Landing() {
               <div className="mt-11">
                 <input
                   id="email"
-                  className="block form-input h-16 mx-auto pl-10 sm:leading-5 sm:text-sm md:text-xl sm:w-2/3 sm:rounded-full"
+                  className="block form-input h-16 mx-auto pl-10 sm:leading-5 sm:text-sm md:text-xl sm:w-2/3 bg-coldgray-200 border-none"
                   placeholder="Busca casas, autos o cualquier cosa"
                 />
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center ">
@@ -249,12 +249,12 @@ function Landing() {
                     </Link>
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <a
-                      href="#"
+                    <Link
+                      to="/houses"
                       className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                     >
-                      Ver un demo
-                    </a>
+                      Ver un demo (casas)
+                    </Link>
                   </div>
                 </div>
               </div>
