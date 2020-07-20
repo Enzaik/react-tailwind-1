@@ -29,7 +29,7 @@ function Hit({ hit }) {
         </div>
         <div className="mt-4">
           <span className="text-teal-600 font-semibold">{hit.stars}/5 estrellas</span>
-          <span className="text-gray-600 text-sm"> (basado en 78 comentarios)</span>
+          <span className="text-gray-600 text-sm"> (78 comentarios)</span>
         </div>
       </div>
     </div>

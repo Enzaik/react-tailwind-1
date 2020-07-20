@@ -228,7 +228,7 @@ function Landing() {
 
           <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-16 lg:mt-20">
             <div class="text-center">
-              <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-4xl sm:leading-none md:text-5xl">
+              <h2 class="text-3xl sm:text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-4xl sm:leading-none md:text-5xl">
                 La búsqueda de clasificados
                 <div class="text-indigo-600">más rápida de Cuba</div>
               </h2>
@@ -236,7 +236,7 @@ function Landing() {
               <div className="mt-11">
                 <input
                   id="email"
-                  className="block form-input h-16 mx-auto pl-10 sm:leading-5 sm:text-sm md:text-xl sm:w-2/3 bg-coldgray-200 border-none"
+                  className="block form-input h-13 text-sm mx-auto pl-3.5 sm:pl-10 sm:leading-5 sm:text-md md:text-xl sm:w-2/3 bg-coldgray-200 border-none"
                   placeholder="Busca casas, autos o cualquier cosa"
                 />
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center ">
@@ -245,7 +245,7 @@ function Landing() {
                       to="/houses"
                       className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
                     >
-                      Probar búsqueda en tiempo real
+                      Búsqueda avanzada
                     </Link>
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -269,6 +269,173 @@ function Landing() {
           <div class="max-w-screen-xl mx-auto px-4 sm:px-6"></div>
         </div>
       </div>
+      {/* from the blog start */}
+      <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+        <div class="absolute inset-0">
+          <div class="bg-white h-1/3 sm:h-2/3"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto">
+          <div class="text-center">
+            <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+              From the blog
+            </h2>
+            <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <p class="text-sm leading-5 font-medium text-indigo-600">
+                    <a href="#" class="hover:underline">
+                      Blog
+                    </a>
+                  </p>
+                  <a href="#" class="block">
+                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">Boost your conversion rate</h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius,
+                      ut atque fuga culpa, similique sequi cum eos quis dolorum.
+                    </p>
+                  </a>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="#">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm leading-5 font-medium text-gray-900">
+                      <a href="#" class="hover:underline">
+                        Roel Aufderhar
+                      </a>
+                    </p>
+                    <div class="flex text-sm leading-5 text-gray-500">
+                      <time datetime="2020-03-16">Mar 16, 2020</time>
+                      <span class="mx-1">&middot;</span>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <p class="text-sm leading-5 font-medium text-indigo-600">
+                    <a href="#" class="hover:underline">
+                      Video
+                    </a>
+                  </p>
+                  <a href="#" class="block">
+                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                      How to use search engine optimization to drive sales
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat
+                      doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo
+                      laudantium.
+                    </p>
+                  </a>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="#">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm leading-5 font-medium text-gray-900">
+                      <a href="#" class="hover:underline">
+                        Brenna Goyette
+                      </a>
+                    </p>
+                    <div class="flex text-sm leading-5 text-gray-500">
+                      <time datetime="2020-03-16">Mar 16, 2020</time>
+                      <span class="mx-1">&middot;</span>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <p class="text-sm leading-5 font-medium text-indigo-600">
+                    <a href="#" class="hover:underline">
+                      {' '}
+                      Case Study
+                    </a>
+                  </p>
+                  <a href="#" class="block">
+                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">Improve your customer experience</h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo
+                      recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.
+                    </p>
+                  </a>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="#">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm leading-5 font-medium text-gray-900">
+                      <a href="#" class="hover:underline">
+                        Daniela Metz
+                      </a>
+                    </p>
+                    <div class="flex text-sm leading-5 text-gray-500">
+                      <time datetime="2020-03-16">Mar 16, 2020</time>
+                      <span class="mx-1">&middot;</span>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* from the blog END */}
       <div class="bg-gray-800">
         <div class="max-w-screen-xl mx-auto pt-16 pb-20 px-4 sm:px-6 md:pb-24 lg:px-8">
           <h3 class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide">
