@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import MainSearchInput from '../../components/MainSearchInput/MainSearchInput';
 
 import logo from '../../img/logo.svg';
 import Transition from '../../Transition';
@@ -148,7 +149,7 @@ function Landing() {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class="absolute top-0 z-10 inset-x-0 p-2 transition transform origin-top-right md:hidden">
               <div class="rounded-lg shadow-md">
                 <div
                   class="rounded-lg bg-white shadow-xs overflow-hidden"
@@ -232,32 +233,7 @@ function Landing() {
                 La búsqueda de clasificados
                 <div class="text-indigo-600">más rápida de Cuba</div>
               </h2>
-
-              <div className="mt-11">
-                <input
-                  id="email"
-                  className="block form-input h-13 text-sm mx-auto pl-3.5 sm:pl-10 sm:leading-5 sm:text-md md:text-xl sm:w-2/3 bg-coldgray-200 border-none"
-                  placeholder="Busca casas, autos o cualquier cosa"
-                />
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center ">
-                  <div className="rounded-md shadow">
-                    <Link
-                      to="/houses"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                    >
-                      Búsqueda avanzada
-                    </Link>
-                  </div>
-                  <div className="mt-3 sm:mt-0 sm:ml-3">
-                    <Link
-                      to="/houses"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                    >
-                      Ver un demo (casas)
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <MainSearchInput />
             </div>
           </div>
         </div>
