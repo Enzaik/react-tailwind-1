@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 import MainSearchInput from '../../components/MainSearchInput/MainSearchInput';
 
 import logo from '../../img/logo.svg';
@@ -76,11 +77,13 @@ function Landing() {
               <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
                   <a href="#" aria-label="Home">
-                    <img
-                      class="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                      alt="Logo"
-                    />
+                    <LazyLoad>
+                      <img
+                        class="h-8 w-auto sm:h-10"
+                        src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
+                        alt="Logo"
+                      />
+                    </LazyLoad>
                   </a>
                   <div class="-mr-2 flex items-center md:hidden">
                     <button
@@ -159,11 +162,13 @@ function Landing() {
                 >
                   <div class="px-5 pt-4 flex items-center justify-between">
                     <div>
-                      <img
-                        class="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                        alt=""
-                      />
+                      <LazyLoad>
+                        <img
+                          class="h-8 w-auto"
+                          src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
+                          alt=""
+                        />
+                      </LazyLoad>
                     </div>
                     <div class="-mr-2">
                       <button
@@ -262,11 +267,13 @@ function Landing() {
           <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
               <div class="flex-shrink-0">
-                <img
-                  class="h-48 w-full object-cover"
-                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                  alt=""
-                />
+                <LazyLoad>
+                  <img
+                    class="h-48 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                    alt=""
+                  />
+                </LazyLoad>
               </div>
               <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div class="flex-1">
@@ -286,11 +293,13 @@ function Landing() {
                 <div class="mt-6 flex items-center">
                   <div class="flex-shrink-0">
                     <a href="#">
-                      <img
-                        class="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                      <LazyLoad>
+                        <img
+                          class="h-10 w-10 rounded-full"
+                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                          alt=""
+                        />
+                      </LazyLoad>
                     </a>
                   </div>
                   <div class="ml-3">
@@ -310,11 +319,13 @@ function Landing() {
             </div>
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
               <div class="flex-shrink-0">
-                <img
-                  class="h-48 w-full object-cover"
-                  src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                  alt=""
-                />
+                <LazyLoad>
+                  <img
+                    class="h-48 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                    alt=""
+                  />
+                </LazyLoad>
               </div>
               <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div class="flex-1">
@@ -337,11 +348,13 @@ function Landing() {
                 <div class="mt-6 flex items-center">
                   <div class="flex-shrink-0">
                     <a href="#">
-                      <img
-                        class="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                      <LazyLoad>
+                        <img
+                          class="h-10 w-10 rounded-full"
+                          src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                          alt=""
+                        />
+                      </LazyLoad>
                     </a>
                   </div>
                   <div class="ml-3">
@@ -361,11 +374,13 @@ function Landing() {
             </div>
             <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
               <div class="flex-shrink-0">
-                <img
-                  class="h-48 w-full object-cover"
-                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                  alt=""
-                />
+                <LazyLoad>
+                  <img
+                    class="h-48 w-full object-cover"
+                    src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                    alt=""
+                  />
+                </LazyLoad>
               </div>
               <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div class="flex-1">
@@ -386,11 +401,13 @@ function Landing() {
                 <div class="mt-6 flex items-center">
                   <div class="flex-shrink-0">
                     <a href="#">
-                      <img
-                        class="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
+                      <LazyLoad>
+                        <img
+                          class="h-10 w-10 rounded-full"
+                          src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                          alt=""
+                        />
+                      </LazyLoad>
                     </a>
                   </div>
                   <div class="ml-3">
