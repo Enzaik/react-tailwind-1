@@ -8,12 +8,12 @@ const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL
   return (
     <div className="sm:flex md:block">
       <div className="px-0 p-6 border-b border-gray-900 sm:p-0 sm:border-b-0 md:border-b md:border-gray-900 md:p-6 ">
-        <label className="text-gray-100">Camas</label>
+        <label className="text-gray-500 font-semibold">Camas</label>
         <ul className="text-sm h-full justify-evenly ">
           {items.map((item) => {
             return (
               <li className="mt-1" key={item.label}>
-                <div className="flex justify-between w-32">
+                <div className="flex justify-between">
                   <div className=" flex items-center">
                     <input
                       onClick={(event) => {
@@ -25,7 +25,7 @@ const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL
                     />
                     <label
                       for={item.label}
-                      className={`${item.isRefined ? 'font-bold' : 'font-medium'} text-gray-600 ml-2`}
+                      className={`${item.isRefined ? 'font-bold text-gray-100' : 'font-semibold text-gray-300'}  ml-2`}
                     >
                       {isFromSearch ? <Highlight attribute="label" hit={item} /> : item.label} {attribute}
                     </label>

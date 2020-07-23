@@ -2426,6 +2426,10 @@ video {
     font-size: 0.875rem;
   }
 
+  .sm\:text-lg {
+    font-size: 1.125rem;
+  }
+
   .sm\:text-2xl {
     font-size: 1.5rem;
   }

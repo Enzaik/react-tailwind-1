@@ -54,7 +54,10 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
 function Hit({ hit }) {
   return (
     <tr>
-      <td key={hit.objectID} className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">
+      <td
+        key={hit.objectID}
+        className="px-6 py-4 whitespace-no-wrap text-sm sm:text-lg leading-5 font-medium text-gray-900"
+      >
         <CustomHighlight attribute="description" hit={hit} tagName="mark" />
       </td>
     </tr>

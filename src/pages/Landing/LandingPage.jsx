@@ -436,19 +436,29 @@ function Landing() {
           </h3>
           <div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo.svg" alt="Tuple" />
+              <LazyLoad>
+                <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo.svg" alt="Tuple" />
+              </LazyLoad>
             </div>
             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo.svg" alt="Mirage" />
+              <LazyLoad>
+                <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo.svg" alt="Mirage" />
+              </LazyLoad>
             </div>
             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-              <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo.svg" alt="StaticKit" />
+              <LazyLoad>
+                <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo.svg" alt="StaticKit" />
+              </LazyLoad>
             </div>
             <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
-              <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo.svg" alt="Transistor" />
+              <LazyLoad>
+                <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo.svg" alt="Transistor" />
+              </LazyLoad>
             </div>
             <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
-              <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo.svg" alt="Workcation" />
+              <LazyLoad>
+                <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo.svg" alt="Workcation" />
+              </LazyLoad>
             </div>
           </div>
         </div>

@@ -32,10 +32,10 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
   return (
     <form className=" mt-2 sm:mt-0 sm:px-10 md:px-0 md:mt-0 ">
       <div className=" border-b border-gray-900 pb-6 sm:p-0 md:p-6 sm:border-b-0 md:border-b md:border-gray-900">
-        <div className="text-gray-100">Precios</div>
+        <div className="text-gray-500 font-semibold">Precios</div>
         <div className="flex">
           <div className="w-1/2 pr-1">
-            <div className="text-gray-300 text-sm">Desde</div>
+            <div className="text-gray-400 text-sm">Desde</div>
             <input
               className="bg-gray-700 block border-none form-input sm:leading-5 sm:text-sm text-white w-full "
               type="number"
@@ -53,7 +53,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
             />
           </div>
           <div className="w-1/2 pl-1">
-            <div className="text-gray-300  mt-0  text-sm">Hasta</div>
+            <div className="text-gray-400  mt-0  text-sm">Hasta</div>
             <input
               className="bg-gray-700 block border-none form-input sm:leading-5 sm:text-sm text-white w-full "
               type="number"
