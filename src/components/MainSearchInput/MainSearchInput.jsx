@@ -16,7 +16,7 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
     <div className="relative mt-11 mx-auto sm:w-2/3">
       <input
         id="email"
-        autocomplete="off"
+        autoComplete="off"
         onChange={inputHandle}
         value={currentRefinement}
         className="block form-input h-13 text-sm  pl-3.5 min-w-full sm:pl-10 sm:leading-5 sm:text-md md:text-xl  bg-coldgray-200 border-none"

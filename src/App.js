@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import algoliasearch from 'algoliasearch/lite';
 
 import {
@@ -10,10 +10,10 @@ import Navbar from './components/Navbar/Navbar';
 import { InstantSearch } from 'react-instantsearch-dom';
 
 // import ListItemHorizontal from './ListItemHorizontal';
-import Houses from './pages/Houses/HousesPage';
-import Search from './Search';
-import Pricing from './components/Pricing/Pricing';
-import Landing from './pages/Landing/LandingPage';
+const Houses = lazy(() => import('./pages/Houses/HousesPage'));
+const Search = lazy(() => import('./Search'));
+const Pricing = lazy(() => import('./components/Pricing/Pricing'));
+const Landing = lazy(() => import('./pages/Landing/LandingPage'));
 // import Header from './Header';
 // import Dropdown from './components/Dropdown/Dropdown';
 // import Popup from './Popup';
@@ -93,9 +93,11 @@ function App() {
   };
 
   return (
-    <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
-      {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
+        {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
+      </div>
+    </Suspense>
   );
 }
 
