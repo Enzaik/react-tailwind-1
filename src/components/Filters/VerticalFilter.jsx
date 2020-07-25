@@ -5,7 +5,10 @@ import CustomRefinementList from '../../CustomRefinedList';
 
 const Filters = ({ items, isFromSearch, refine, searchForItems, createURL, attribute }) => {
   return (
-    <div className="fixed h-screen hidden width-left-panel md:block pt-panel top-0 z-20 bg-gray-800">
+    <div className="fixed h-screen hidden width-left-panel md:block pt-panel top-0 z-20 bg-gray-900">
+      <div className="w-full h-full bg-gray-800">
+        <CustomRefinementList attribute="beds" searchable />
+      </div>
       {/* <ul className="border-b-2 border-gray-900 mt-2 pb-2 px-10 ">
         <div className="text-gray-100 px-10">Camas</div>
         {items.map((item) => {
@@ -40,7 +43,6 @@ const Filters = ({ items, isFromSearch, refine, searchForItems, createURL, attri
       </ul>
       <RangeInput attribute="price" /> */}
       {/* </div> */}
-      <CustomRefinementList attribute="beds" searchable />
     </div>
   );
 };
