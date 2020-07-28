@@ -19,7 +19,7 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
         autoComplete="off"
         onChange={inputHandle}
         value={currentRefinement}
-        className="block form-input h-13 text-sm  pl-3.5 min-w-full sm:pl-10 sm:leading-5 sm:text-md md:text-xl  bg-coldgray-200 border-none"
+        className="block form-input h-13 text-sm  pl-3.5 min-w-full sm:pl-10 sm:leading-5 sm:text-md bg-coldgray-200 border-none"
         placeholder="Busca casas, autos o cualquier cosa"
       />
       <table className="absolute min-w-full">
@@ -33,7 +33,7 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
         <div className="rounded-md shadow">
           <Link
             to="/houses"
-            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 sm:text-md sm:px-2 md:px-10"
           >
             Búsqueda avanzada
           </Link>
@@ -41,7 +41,7 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
         <div className="mt-3 sm:mt-0 sm:ml-3">
           <Link
             to="/houses"
-            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 sm:text-md sm:px-2 md:px-10"
           >
             Ver un demo (casas)
           </Link>
