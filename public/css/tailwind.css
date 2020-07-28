@@ -7,3 +7,19 @@
 .fit-content {
   width: fit-content;
 }
+
+.sticky {
+  position: sticky;
+  align-self: flex-start;
+}
+
+.margin-filter {
+  margin-left: 240px;
+}
+
+.width-left-panel {
+  width: 240px;
+}
+.pt-panel {
+  padding-top: 64px;
+}

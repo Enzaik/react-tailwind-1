@@ -6,12 +6,12 @@ import logo from '../../img/logo.svg';
 
 import Dropdown from '../Dropdown/Dropdown';
 import RangeInput from '../../RangeInput';
-import SearchInputLargeScreen from '../../components/SearchInput/SearchInputLargeScreen';
+import SearchInputLargeScreen from '../SearchInput/SearchInputLargeScreen';
 
-function Navbar(filterHandler = null, shouldShowBar = null) {
+function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="bg-gray-900 shadow z-20 top-0 md:bg-white">
+    <nav className="bg-gray-900 shadow z-20 top-0 xl:bg-white">
       <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -49,10 +49,6 @@ function Navbar(filterHandler = null, shouldShowBar = null) {
               <img className="block lg:hidden h-8 w-auto" src={logo} alt="Workflow logo" />
               <img className="hidden lg:block h-8 w-auto" src={logo} alt="Workflow logo" />
             </div>
-
-            {filterHandler && shouldShowBar && (
-              <SearchInputLargeScreen filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
-            )}
 
             <div className="hidden sm:ml-6 sm:flex">
               <Link
@@ -99,7 +95,7 @@ function Navbar(filterHandler = null, shouldShowBar = null) {
         onClick={() => setIsMobileMenuOpen(false)}
         className={` ${isMobileMenuOpen ? 'fixed' : 'hidden'} fixed top-0 left-0 bottom-0 right-0 h-full w-full `}
       ></button>
-      <div className={`${isMobileMenuOpen ? 'absolute' : 'hidden'} absolute w-full bg-white sm:hidden z-20`}>
+      <div className={`${isMobileMenuOpen ? 'absolute' : 'hidden'} absolute w-full bg-white sm:hidden`}>
         <div className="pt-2 pb-4 ">
           <Link
             to="/houses"

@@ -29,7 +29,7 @@ function Hit({ hit }) {
         </div>
         <div className="mt-4">
           <span className="text-teal-600 font-semibold">{hit.stars}/5 estrellas</span>
-          <span className="text-gray-600 text-sm"> (basado en 78 comentarios)</span>
+          <span className="text-gray-600 text-sm"> (78 comentarios)</span>
         </div>
       </div>
     </div>
@@ -39,7 +39,7 @@ function Hit({ hit }) {
 const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
 const Hits = ({ hits }) => (
-  <div className="grid gap-2 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-none">
+  <div className="grid gap-2 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-none">
     {hits.map((hit) => (
       <HitWithInsights key={hit.objectID} hit={hit} />
     ))}

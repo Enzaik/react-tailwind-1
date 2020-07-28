@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./src/**/*.jsx'],
+  purge: { content: ['./src/**/*.jsx'], enabled: true },
   theme: {
     extend: {
       fontFamily: {
@@ -35,6 +35,17 @@ module.exports = {
           700: '#008787',
           800: '#007373',
           900: '#005f5f',
+        },
+        coldgray: {
+          100: '#F5F7FA',
+          200: '#E4E8EB',
+          300: '#CBD2D9',
+          400: '#9AA5B1',
+          500: '#7B8794',
+          600: '#616E7C',
+          700: '#3E4C59',
+          800: '#323F4B',
+          900: '#1F2933',
         },
       },
       spacing: {

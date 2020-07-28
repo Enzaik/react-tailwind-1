@@ -1,21 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import algoliasearch from 'algoliasearch/lite';
-import {
-  Hits,
-  SearchBox,
-  Pagination,
-  Highlight,
-  ClearRefinements,
-  RefinementList,
-  Configure,
-} from 'react-instantsearch-dom';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 
-import CustomSearchBox from '../../components/CustomSearchBox/CustomSearchBox';
+import SearchInput from '../../components/SearchInput/SearchInput';
 import Navbar from '../../components/Navbar/Navbar';
 import Filters from '../../components/Filters/Filters';
-import Houses from '../../components/Houses/Houses';
-
-import Transition from '../../Transition';
+const Houses = lazy(() => import('../../components/Houses/Houses'));
 
 function HousesComponent() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,13 +37,17 @@ function HousesComponent() {
   let shouldShowBar = goingUp || window.scrollY === 0;
 
   return (
-    <div>
+    <div className="h-screen">
       <div className="fixed w-full z-10">
-        <Navbar />
-        <CustomSearchBox filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
-        <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
+        <Navbar filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
+        <div className="md:hidden">
+          <SearchInput filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
+          <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
+        </div>
       </div>
-      <Houses />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Houses />
+      </Suspense>
     </div>
   );
 }
