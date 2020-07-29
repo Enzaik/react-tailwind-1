@@ -30,7 +30,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
                   </svg>
                 </div>
                 <input
-                  className="form-input block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
+                  className="form-input rounded-full block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
                   placeholder="Buscar casas..."
                   type="search"
                   value={currentRefinement}
