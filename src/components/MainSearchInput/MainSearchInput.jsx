@@ -19,7 +19,7 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
         autoComplete="off"
         onChange={inputHandle}
         value={currentRefinement}
-        className="block form-input h-13 text-sm  pl-3.5 min-w-full sm:pl-10 sm:leading-5 sm:text-md bg-coldgray-200 border-none"
+        className="block form-input h-13 text-sm rounded-full pl-3.5 min-w-full sm:pl-10 sm:leading-5 sm:text-md bg-coldgray-200 border-none focus:bg-white"
         placeholder="Busca casas, autos o cualquier cosa"
       />
       <table className="absolute min-w-full">

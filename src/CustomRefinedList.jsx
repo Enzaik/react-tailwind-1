@@ -25,7 +25,7 @@ const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL
                     />
                     <label
                       for={item.label}
-                      className={`${item.isRefined ? 'font-bold text-gray-100' : 'font-semibold text-gray-300'}  ml-2`}
+                      className={`${item.isRefined ? 'font-bold text-gray-100' : 'font-semibold text-gray-400'}  ml-2`}
                     >
                       {isFromSearch ? <Highlight attribute="label" hit={item} /> : item.label} {attribute}
                     </label>

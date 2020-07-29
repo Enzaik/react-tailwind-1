@@ -20,7 +20,13 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
             <form noValidate action="" role="search" className="relative my-auto w-full mx-auto">
               <div className="flex">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    // className="animate-spin"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"

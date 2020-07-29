@@ -54,7 +54,8 @@ module.exports = {
     },
   },
   variants: {
-    cursor: ['hover'],
+    cursor: ['hover', 'focus'],
+    borderRadius: ['focus'],
   },
   plugins: [
     require('@tailwindcss/ui')({

@@ -377,7 +377,6 @@ pre {
 button {
   background-color: transparent;
   background-image: none;
-  padding: 0;
 }
 
 /**
@@ -578,7 +577,49 @@ video {
   height: auto;
 }
 
-/*tailwind start components */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
 
 .container {
   width: 100%;
@@ -829,8 +870,6 @@ video {
   border-color: transparent;
 }
 
-/*tailwind end components */
-
 .space-y-1 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--space-y-reverse)));
@@ -1007,6 +1046,12 @@ video {
   --bg-opacity: 1;
   background-color: #6875f5;
   background-color: rgba(104, 117, 245, var(--bg-opacity));
+}
+
+.focus\:bg-white:focus {
+  --bg-opacity: 1;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
 }
 
 .focus\:bg-gray-50:focus {
@@ -2359,6 +2404,10 @@ video {
   transition-duration: 300ms;
 }
 
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
 .fit-content {
   width: -moz-fit-content;
   width: fit-content;
@@ -2382,6 +2431,34 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .sm\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sm\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .sm\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .sm\:container {
+      max-width: 1536px;
+    }
+  }
+
   .sm\:border-b-0 {
     border-bottom-width: 0;
   }
@@ -2526,6 +2603,11 @@ video {
     padding-right: 0;
   }
 
+  .sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2621,6 +2703,34 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .md\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .md\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .md\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .md\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .md\:container {
+      max-width: 1536px;
+    }
+  }
+
   .md\:space-x-10 > :not(template) ~ :not(template) {
     --space-x-reverse: 0;
     margin-right: calc(2.5rem * var(--space-x-reverse));
@@ -2683,14 +2793,6 @@ video {
 
   .md\:flex-1 {
     flex: 1 1 0%;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
   }
 
   .md\:text-5xl {
@@ -2784,18 +2886,32 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .lg\:rounded-none {
-    border-radius: 0;
+  .lg\:container {
+    width: 100%;
   }
 
-  .lg\:rounded-r-lg {
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
+  @media (min-width: 640px) {
+    .lg\:container {
+      max-width: 640px;
+    }
   }
 
-  .lg\:rounded-l-lg {
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+  @media (min-width: 1024px) {
+    .lg\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .lg\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .lg\:container {
+      max-width: 1536px;
+    }
   }
 
   .lg\:block {
@@ -2942,6 +3058,34 @@ video {
 }
 
 @media (min-width: 1536px) {
+  .xl\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .xl\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .xl\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .xl\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .xl\:container {
+      max-width: 1536px;
+    }
+  }
+
   .xl\:bg-white {
     --bg-opacity: 1;
     background-color: #ffffff;

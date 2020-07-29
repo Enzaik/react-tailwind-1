@@ -3,9 +3,9 @@ import LazyLoad from 'react-lazyload';
 import { Configure, Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
 function Hit({ hit }) {
-  //@TODO: refactor to make generic
+  // @TODO: refactor to make generic
   return (
-    <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-xl hover:cursor-pointer sm:w-25">
+    <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
         <LazyLoad>
           <img className="absolute h-48 w-full object-cover" src={hit.url} />
@@ -20,16 +20,16 @@ function Hit({ hit }) {
             {hit.beds} camas &bull; {hit.baths} baños
           </div>
         </div>
-        <h4 className="mt-1 font-semibold text-lg leading-tight truncate">
+        <div className="mt-1 font-semibold text-lg leading-tight truncate">
           <Highlight attribute="description" hit={hit} tagName="mark" />
-        </h4>
+        </div>
         <div className="mt-1">
           ${hit.price}
-          <span className="text-gray-600 text-sm"> / wk</span>
+          <span className="text-gray-600 text-sm"></span>
         </div>
         <div className="mt-4">
           <span className="text-teal-600 font-semibold">{hit.stars}/5 estrellas</span>
-          <span className="text-gray-600 text-sm"> (78 comentarios)</span>
+          <span className="text-gray-600 text-sm"> (78)</span>
         </div>
       </div>
     </div>
