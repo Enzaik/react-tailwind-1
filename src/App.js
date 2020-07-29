@@ -14,6 +14,7 @@ const Houses = lazy(() => import('./pages/Houses/HousesPage'));
 const Search = lazy(() => import('./Search'));
 const Pricing = lazy(() => import('./components/Pricing/Pricing'));
 const Landing = lazy(() => import('./pages/Landing/LandingPage'));
+const CustomBreadcrumb = lazy(() => import('./BreadCrumbs'));
 // import Header from './Header';
 // import Dropdown from './components/Dropdown/Dropdown';
 // import Popup from './Popup';
@@ -44,7 +45,7 @@ function App() {
       exact: false,
     },
     {
-      component: 'Landing ',
+      component: 'CustomBreadcrumb ',
       path: '/landing',
       exact: false,
     },
@@ -78,7 +79,11 @@ function App() {
       case '/landing':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
-            <Landing />
+            <InstantSearch indexName="houses" searchClient={searchClient}>
+              <CustomBreadcrumb
+                attributes={['categories.lvl0', 'categories.lvl1', 'categories.lvl2', 'categories.lvl3']}
+              />
+            </InstantSearch>
           </Route>
         );
       default:

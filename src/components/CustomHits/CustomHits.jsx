@@ -2,6 +2,8 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { Configure, Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
+import CustomCurrentRefinements from '../../Refinements';
+
 function Hit({ hit }) {
   // @TODO: refactor to make generic
   return (
@@ -39,11 +41,14 @@ function Hit({ hit }) {
 const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
 const Hits = ({ hits }) => (
-  <div className="grid gap-2 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-none">
-    {hits.map((hit) => (
-      <HitWithInsights key={hit.objectID} hit={hit} />
-    ))}
-  </div>
+  <>
+    {/* <CustomCurrentRefinements /> */}
+    <div className="grid gap-2 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-none">
+      {hits.map((hit) => (
+        <HitWithInsights key={hit.objectID} hit={hit} />
+      ))}
+    </div>
+  </>
 );
 
 const CustomHits = connectHits(Hits);
