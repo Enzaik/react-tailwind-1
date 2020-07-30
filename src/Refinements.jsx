@@ -14,41 +14,49 @@ const CurrentRefinements = ({ items, refine, createURL }) => {
   }
 
   let counter = 0;
+  let filterCounter = 0;
   return (
     <div className="flex">
-      {newItems.map((item) => (
-        <div className="mx-1" key={item.label}>
-          {item.items ? (
-            <>
-              {item.label}
-              {item.items.map((nested) => {
-                counter++;
-                return (
-                  <a
-                    href={createURL(nested.value)}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      refine(nested.value);
-                    }}
-                  >
-                    {`${counter < 2 ? '' : ', '}${nested.label}`}
-                  </a>
-                );
-              })}{' '}
-            </>
-          ) : (
-            <a
-              href={createURL(item.value)}
-              onClick={(event) => {
-                event.preventDefault();
-                refine(item.value);
-              }}
-            >
-              {`${item.label} `}
-            </a>
-          )}{' '}
-        </div>
-      ))}
+      {newItems.map((item) => {
+        console.log(item);
+        filterCounter++;
+        return (
+          <>
+            {`${filterCounter < 2 ? '' : '•'} `}
+            <div className="mx-1" key={item.label}>
+              {item.items ? (
+                <>
+                  {item.label}
+                  {item.items.map((nested) => {
+                    counter++;
+                    return (
+                      <a
+                        href={createURL(nested.value)}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          refine(nested.value);
+                        }}
+                      >
+                        {`${counter < 2 ? '' : ', '}${nested.label}`}
+                      </a>
+                    );
+                  })}{' '}
+                </>
+              ) : (
+                <a
+                  href={createURL(item.value)}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    refine(item.value);
+                  }}
+                >
+                  {`${item.label} `}
+                </a>
+              )}
+            </div>
+          </>
+        );
+      })}
     </div>
   );
 };

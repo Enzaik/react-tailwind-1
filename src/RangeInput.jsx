@@ -42,7 +42,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
               placeholder={min}
               min={min}
               max={max}
-              step={1 / Math.pow(10, precision)}
+              // step={1 / Math.pow(10, precision)}
               // value={refinement.min}
               onChange={(event) => {
                 setRefinement({
@@ -60,7 +60,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
               placeholder={max}
               min={min}
               max={max}
-              step={1 / Math.pow(10, precision)}
+              // step={1 / Math.pow(10, precision)}
               // value={refinement.max}
               onChange={(event) =>
                 setRefinement({

@@ -3,10 +3,10 @@ import { connectSearchBox } from 'react-instantsearch-dom';
 
 import Transition from '../../Transition';
 
-const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, shouldShowBar }) => {
+const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler }) => {
   return (
     <Transition
-      show={shouldShowBar}
+      show={true}
       enter="transition ease-out duration-100 transform"
       enterFrom="opacity-0 scale-95"
       enterTo="opacity-100 scale-100"

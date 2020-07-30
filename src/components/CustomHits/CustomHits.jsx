@@ -43,7 +43,7 @@ const HitWithInsights = connectHitInsights(window.aa)(Hit);
 const Hits = ({ hits }) => (
   <>
     {/* <CustomCurrentRefinements /> */}
-    <div className="grid gap-2 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-none">
+    <div className="grid gap-5 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-5xl">
       {hits.map((hit) => (
         <HitWithInsights key={hit.objectID} hit={hit} />
       ))}
