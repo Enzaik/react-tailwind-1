@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 import MainSearchInput from '../../components/MainSearchInput/MainSearchInput';
+import CategoriesMenu from '../../components/CategoriesMenu/CategoriesMenu';
 
 import logo from '../../img/logo.svg';
 import Transition from '../../Transition';
@@ -254,6 +255,7 @@ function Landing() {
             </div>
           </div>
         </div>
+        <CategoriesMenu />
         <div className="relative">
           <div className="absolute inset-0 flex flex-col">
             <div className="flex-1"></div>
