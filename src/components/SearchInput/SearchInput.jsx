@@ -40,7 +40,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler }
                 />
                 <button
                   onClick={filterHandler}
-                  className="inline-flex items-center px-2.5 bg-gray-700 text-gray-100 rounded-md hover:bg-gray-600 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-gray-600 transition ease-in-out duration-150"
+                  className="inline-flex items-center rounded-full px-2.5 bg-gray-700 text-gray-100 rounded-md hover:bg-gray-600 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-gray-600 transition ease-in-out duration-150"
                 >
                   <svg
                     className="text-gray-500 mr-1 "
