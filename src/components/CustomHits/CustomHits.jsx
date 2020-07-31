@@ -15,7 +15,7 @@ function Hit({ hit }) {
       </div>
       <div className="p-4">
         <div className="flex items-baseline">
-          <span className="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
+          <span className="inline-block bg-cyanvivid-200 text-cyanvivid-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
             Nueva
           </span>
           <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">

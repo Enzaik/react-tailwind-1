@@ -21,7 +21,7 @@ const RefinementList = ({ items, isFromSearch, refine, searchForItems, createURL
                       }}
                       id={item.label}
                       type="checkbox"
-                      className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+                      className="form-checkbox bg-gray-900 border-none h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
                       checked={item.isRefined}
                     />
                     <label
