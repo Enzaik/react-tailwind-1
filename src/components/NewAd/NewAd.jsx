@@ -21,7 +21,7 @@ function NewAd({ shouldShowBar }) {
             </form>
 
             <form method="post">
-              <input type="hidden" name="form-name1" value="ad" />
+              <input type="hidden" name="form-name" value="ad" />
               <div>
                 <div>
                   <div>
