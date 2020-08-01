@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { connectAutoComplete, connectHitInsights } from 'react-instantsearch-dom';
@@ -7,22 +7,38 @@ import CustomHighlight from '../CustomHighlight/CustomHighlight';
 
 function MainSearchInput({ hits, currentRefinement, refine }) {
   const [value, setValue] = useState('');
-  const inputHandle = (e) => {
+  const [areSearchResults, setAreSearchResults] = useState(false);
+  useEffect(() => {
+    console.log(hits);
+  }, []);
+  const inputHandle = (e, hits) => {
+    console.log(hits, e.target.value.length);
+    setAreSearchResults(hits.length, e.target.value.length);
     setValue(e.target.value);
     refine(e.currentTarget.value);
   };
 
   return (
-    <div className="relative mt-11 mx-auto sm:w-2/3">
+    <div className="relative mt-11 mx-auto sm:w-2/3 ">
+      <div className="absolute inset-y-0 left-0 pl-3 flex items-center h-13 pointer-events-none">
+        <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M14.32 12.906l1.096 1.096c.412-.023.83.123 1.145.437l3 3a1.5 1.5 0 01-2.122 2.122l-3-3a1.497 1.497 0 01-.437-1.145l-1.096-1.096a8 8 0 111.414-1.414zM8 14A6 6 0 108 2a6 6 0 000 12z"
+            fill="#A0AEC0"
+          />
+        </svg>
+      </div>
       <input
-        id="email"
+        id="search"
         autoComplete="off"
-        onChange={inputHandle}
+        onChange={(e) => inputHandle(e, hits)}
         value={currentRefinement}
-        className="block form-input h-13 text-sm rounded-full pl-3.5 min-w-full sm:pl-10 sm:leading-5 sm:text-md bg-coldgray-200 border-none focus:bg-white"
+        className={`block form-input  h-13 text-sm rounded-xl min-w-full pl-10 sm:leading-5 sm:text-md bg-coldgray-200 border-none focus:bg-white`}
         placeholder="Busca casas, autos o cualquier cosa"
       />
-      <table className="absolute min-w-full">
+      <table className="min-w-full mt-1 rounded-md overflow-hidden shadow-sm">
         <tbody className={`${value ? 'bg-white' : 'hidden'}`}>
           {hits.map((hit) => (
             <HitWithInsights key={hit.objectID} hit={hit} />
@@ -56,7 +72,7 @@ function Hit({ hit }) {
     <tr>
       <td
         key={hit.objectID}
-        className="px-6 py-4 whitespace-no-wrap text-sm sm:text-lg leading-5 font-medium text-gray-900"
+        className="px-6 py-4 text-left whitespace-no-wrap text-sm sm:text-lg leading-5 font-medium text-gray-900"
       >
         <CustomHighlight attribute="description" hit={hit} tagName="mark" />
       </td>

@@ -19,7 +19,7 @@ function Houses() {
       </div>
       <div className="hidden md:block">
         <main className=" pt-24 mx-auto py-6 sm:px-6 margin-filter lg:px-8">
-          <div className="flex  mx-auto px-2 justify-between items-baseline">
+          <div className="flex max-w-5xl mx-auto px-2 justify-between items-baseline">
             <div className="font-semibold">Casas</div>
             <CustomCurrentRefinements />
             <div className="text-sm text-indigo-600">Ver más</div>

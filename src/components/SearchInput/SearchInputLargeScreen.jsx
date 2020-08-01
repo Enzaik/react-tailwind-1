@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { connectSearchBox } from 'react-instantsearch-dom';
+import logo from '../../img/logo.svg';
 
 import Transition from '../../Transition';
 
@@ -15,6 +16,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
       leaveTo="opacity-0 scale-95"
     >
       <div className="hidden md:block bg-white w-full z-10 mx-auto px-2 mt-0 sm:px-1/4">
+        <img className="hidden lg:block h-8 w-auto" src={logo} alt="Workflow logo" />
         <div className="relative flex justify-between h-full">
           <div className="absolute w-full inset-y-0 left-0 flex">
             <form noValidate action="" role="search" className="relative my-auto w-full mx-auto">
