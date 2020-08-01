@@ -12,9 +12,9 @@ const MyHighlight = ({ highlight, attribute, hit }) => {
     <span>
       {parsedHit.map((part, index) =>
         part.isHighlighted ? (
-          <mark className="font-extrabold bg-white" key={index}>
+          <strong className="font-extrabold" key={index}>
             {part.value}
-          </mark>
+          </strong>
         ) : (
           <span key={index}>{part.value}</span>
         )

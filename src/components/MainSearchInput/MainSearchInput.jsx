@@ -69,12 +69,11 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
 
 function Hit({ hit }) {
   return (
-    <tr>
-      <td
-        key={hit.objectID}
-        className="px-6 py-4 text-left whitespace-no-wrap text-sm sm:text-lg leading-5 font-medium text-gray-900"
-      >
-        <CustomHighlight attribute="description" hit={hit} tagName="mark" />
+    <tr className="hover:bg-gray-100">
+      <td key={hit.objectID} className="px-6 py-4 text-left whitespace-no-wrap text-md leading-5 text-gray-900">
+        <Link to="/houses">
+          <CustomHighlight attribute="description" hit={hit} tagName="mark" />
+        </Link>
       </td>
     </tr>
   );
