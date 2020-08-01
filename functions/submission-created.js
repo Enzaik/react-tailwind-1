@@ -14,7 +14,7 @@ exports.handler = (event, context, callback) => {
     .saveObject(
       {
         name: data.category,
-        price: data.price,
+        price: +data.price,
         beds: data.beds,
         baths: data.baths,
         description: data.description,
