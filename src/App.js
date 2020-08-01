@@ -6,7 +6,7 @@ import {
   Route,
   // Link
 } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
+// import Navbar from './components/Navbar/Navbar';
 import { InstantSearch, browseObjects } from 'react-instantsearch-dom';
 
 // import ListItemHorizontal from './ListItemHorizontal';
@@ -19,6 +19,7 @@ const NewAd = lazy(() => import('./components/NewAd/NewAd'));
 
 function App() {
   const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
+  const housesIndex = searchClient.initIndex('houses');
 
   const [isOpen, setIsOpen] = useState(false);
   const filterHandler = (e) => {
@@ -86,7 +87,7 @@ function App() {
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
-              <NewAd shouldShowBar={false} />
+              <NewAd shouldShowBar={false} housesIndex={housesIndex} />
             </InstantSearch>
           </Route>
         );

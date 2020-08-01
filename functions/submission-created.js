@@ -4,6 +4,7 @@ exports.handler = (event, context, callback) => {
   // Do something with the email address and then
   // invoke the callback.
   console.log(response);
+  console.log(process.env);
 
   callback(null, {
     statusCode: 200,
