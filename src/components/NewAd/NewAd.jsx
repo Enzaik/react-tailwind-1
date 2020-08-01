@@ -57,11 +57,30 @@ function NewAd({ shouldShowBar }) {
                       <div class="mt-1 sm:mt-0 sm:col-span-2">
                         <div class="max-w-lg flex rounded-md shadow-sm">
                           <input
+                            required
                             type="number"
                             id="price"
                             name="price"
                             class="flex-1 form-input block w-full min-w-0  rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                           />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                      <label for="province" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
+                        Provincia
+                      </label>
+                      <div class="mt-1 sm:mt-0 sm:col-span-2">
+                        <div class="max-w-lg flex rounded-md shadow-sm">
+                          <select
+                            id="province"
+                            name="province"
+                            class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
+                          >
+                            <option selected>La Habana</option>
+                            <option>Matanzas</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -88,14 +107,14 @@ function NewAd({ shouldShowBar }) {
                     </div>
 
                     <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                      <label for="rooms" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
-                        No. de habitaciones
+                      <label for="baths" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
+                        No. de baños
                       </label>
                       <div class="mt-1 sm:mt-0 sm:col-span-2">
                         <div class="max-w-lg flex rounded-md shadow-sm">
                           <select
-                            id="rooms"
-                            name="rooms"
+                            id="baths"
+                            name="baths"
                             class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
                           >
                             <option selected>1</option>

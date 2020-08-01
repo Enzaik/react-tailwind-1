@@ -8,19 +8,19 @@ exports.handler = (event, context, callback) => {
   // invoke the callback.
 
   console.log('response', response);
+  const { data } = response;
 
   housesIndex
     .saveObject(
       {
-        name: 'from this shit',
-        description: 'from this shit',
-        price: 5663,
-        beds: 3,
-        baths: 1,
-        stars: 1,
-        url:
-          'https://images.unsplash.com/photo-1509592149237-bc44977d96d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-        province: 'La Habana',
+        name: data.category,
+        price: data.price,
+        beds: data.beds,
+        baths: data.baths,
+        description: data.description,
+        stars: 5,
+        url: data.photo,
+        province: data.province,
       },
       { autoGenerateObjectIDIfNotExist: true }
     )
