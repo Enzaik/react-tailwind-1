@@ -16,9 +16,12 @@ function NewAd({ shouldShowBar }) {
         <main>
           <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             {/* <!-- Replace with your content --> */}
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+              <select name="category" />
+            </form>
 
             <form method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name1" value="contact" />
               <div>
                 <div>
                   <div>
@@ -35,6 +38,7 @@ function NewAd({ shouldShowBar }) {
                       <div class="mt-1 sm:mt-0 sm:col-span-2">
                         <div class="max-w-lg flex rounded-md shadow-sm">
                           <select
+                            name="category"
                             id="category"
                             class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
                           >
