@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
-import algoliasearch from 'algoliasearch/lite';
+import algoliasearch from 'algoliasearch';
 
 import {
   // BrowserRouter as Router, Switch,

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../Navbar/Navbar';
 
-function NewAd({ shouldShowBar }) {
+function NewAd({ shouldShowBar, housesIndex }) {
   const truth = (
     <>
       <div className="fixed w-full z-30">
@@ -158,6 +158,25 @@ function NewAd({ shouldShowBar }) {
                   </span>
                   <span class="ml-3 inline-flex rounded-md shadow-sm">
                     <button
+                      // onClick={(e) => {
+                      //   e.preventDefault();
+
+                      //   housesIndex
+                      //     .saveObject({
+                      //       name: 'fuuuuuck',
+                      //       description: 'ligula pellentesque ultrices',
+                      //       price: 5663,
+                      //       beds: 3,
+                      //       baths: 1,
+                      //       stars: 1,
+                      //       url:
+                      //         'https://images.unsplash.com/photo-1509592149237-bc44977d96d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+                      //       province: 'La Habana',
+                      //     })
+                      //     .then(({ objectID }) => {
+                      //       console.log(objectID);
+                      //     });
+                      // }}
                       type="submit"
                       class="inline-flex justify-center py-2 px-4 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
                     >
