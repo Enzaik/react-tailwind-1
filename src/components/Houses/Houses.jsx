@@ -4,7 +4,7 @@ import CustomHits from '../CustomHits/CustomHits';
 import VerticalFilter from '../Filters/VerticalFilter';
 import CustomCurrentRefinements from '../../Refinements';
 
-function Houses() {
+function Houses({ shouldShowBar }) {
   return (
     <>
       <VerticalFilter attribute="beds" searchable />

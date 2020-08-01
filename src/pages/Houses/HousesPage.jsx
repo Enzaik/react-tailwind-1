@@ -5,15 +5,9 @@ import Navbar from '../../components/Navbar/Navbar';
 import Filters from '../../components/Filters/Filters';
 const Houses = lazy(() => import('../../components/Houses/Houses'));
 
-function HousesComponent() {
-  const [isOpen, setIsOpen] = useState(false);
-  const prevScrollY = useRef(0);
-  const [goingUp, setGoingUp] = useState(true);
-
-  const filterHandler = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-  };
+function HousesComponent({ filter, isOpen, filterHandler, shouldShowBar }) {
+  // const prevScrollY = useRef(0);
+  // const [goingUp, setGoingUp] = useState(true);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -40,7 +34,7 @@ function HousesComponent() {
     <div className="h-screen">
       <div className="fixed w-full z-10">
         {/* <Navbar filterHandler={filterHandler} shouldShowBar={shouldShowBar} /> */}
-        <Navbar filterHandler={filterHandler} />
+        <Navbar filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
         <div className="md:hidden">
           <SearchInput filterHandler={filterHandler} />
           <Filters isOpen={isOpen} />

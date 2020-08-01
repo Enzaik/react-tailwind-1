@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import algoliasearch from 'algoliasearch/lite';
 
 import {
@@ -15,10 +15,16 @@ const Search = lazy(() => import('./Search'));
 const Pricing = lazy(() => import('./components/Pricing/Pricing'));
 const Landing = lazy(() => import('./pages/Landing/LandingPage'));
 const CustomBreadcrumb = lazy(() => import('./BreadCrumbs'));
+const NewAd = lazy(() => import('./components/NewAd/NewAd'));
 
 function App() {
   const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
 
+  const [isOpen, setIsOpen] = useState(false);
+  const filterHandler = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
   const componentsConfig = [
     {
       component: 'Pricing',
@@ -45,6 +51,11 @@ function App() {
       path: '/landing',
       exact: false,
     },
+    {
+      component: 'NewAd ',
+      path: '/newad',
+      exact: false,
+    },
   ];
 
   const renderComponent = (componentConfig) => {
@@ -59,16 +70,23 @@ function App() {
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
-              <Houses />
+              <Houses isOpen={isOpen} filterHandler={filterHandler} shouldShowBar={true} />
             </InstantSearch>
           </Route>
         );
       case '/search':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
-            <Navbar />
             <InstantSearch indexName="houses" searchClient={searchClient}>
               <Search />
+            </InstantSearch>
+          </Route>
+        );
+      case '/newad':
+        return (
+          <Route exact={componentConfig.exact} path={componentConfig.path}>
+            <InstantSearch indexName="houses" searchClient={searchClient}>
+              <NewAd shouldShowBar={false} />
             </InstantSearch>
           </Route>
         );

@@ -8,7 +8,7 @@ import Dropdown from '../Dropdown/Dropdown';
 import RangeInput from '../../RangeInput';
 import SearchInputLargeScreen from '../../components/SearchInput/SearchInputLargeScreen';
 
-function Navbar(filterHandler = null, shouldShowBar = null) {
+function Navbar({ filterHandler = null, shouldShowBar }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <nav className="bg-gray-900 shadow z-20 top-0 md:bg-white">
