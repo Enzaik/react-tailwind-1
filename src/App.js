@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import algoliasearch from 'algoliasearch/lite';
 
 import {
@@ -7,7 +7,7 @@ import {
   // Link
 } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import { InstantSearch } from 'react-instantsearch-dom';
+import { InstantSearch, browseObjects } from 'react-instantsearch-dom';
 
 // import ListItemHorizontal from './ListItemHorizontal';
 const Houses = lazy(() => import('./pages/Houses/HousesPage'));
@@ -15,14 +15,10 @@ const Search = lazy(() => import('./Search'));
 const Pricing = lazy(() => import('./components/Pricing/Pricing'));
 const Landing = lazy(() => import('./pages/Landing/LandingPage'));
 const CustomBreadcrumb = lazy(() => import('./BreadCrumbs'));
-// import Header from './Header';
-// import Dropdown from './components/Dropdown/Dropdown';
-// import Popup from './Popup';
-// import Product from './Product';
-// import Test from './Test';
 
 function App() {
   const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
+
   const componentsConfig = [
     {
       component: 'Pricing',

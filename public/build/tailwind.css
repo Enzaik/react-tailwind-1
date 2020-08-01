@@ -1612,8 +1612,8 @@ video {
   opacity: 1;
 }
 
-.hover\:opacity-25:hover {
-  opacity: 0.25;
+.hover\:opacity-50:hover {
+  opacity: 0.5;
 }
 
 .focus\:outline-none:focus {
@@ -2049,6 +2049,12 @@ video {
   --text-opacity: 1;
   color: #42389d;
   color: rgba(66, 56, 157, var(--text-opacity));
+}
+
+.text-coldgray-400 {
+  --text-opacity: 1;
+  color: #9AA5B1;
+  color: rgba(154, 165, 177, var(--text-opacity));
 }
 
 .text-coldgray-800 {
@@ -3089,6 +3095,10 @@ video {
     --bg-opacity: 1;
     background-color: #ffffff;
     background-color: rgba(255, 255, 255, var(--bg-opacity));
+  }
+
+  .xl\:block {
+    display: block;
   }
 
   .xl\:p-10 {

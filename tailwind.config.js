@@ -68,6 +68,7 @@ module.exports = {
     cursor: ['hover', 'focus'],
     borderRadius: ['focus'],
     opacity: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
   },
   plugins: [
     require('@tailwindcss/ui')({

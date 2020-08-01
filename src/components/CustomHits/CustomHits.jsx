@@ -10,28 +10,36 @@ function Hit({ hit }) {
     <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
         <LazyLoad>
-          <img className="absolute h-48 w-full object-cover hover:opacity-25" src={hit.url} />
+          <img
+            className="absolute h-48 w-full object-cover transition duration-200 ease-in-out opacity-100 hover:opacity-50"
+            src={hit.url}
+          />
         </LazyLoad>
       </div>
       <div className="p-4">
-        <div className="flex items-baseline">
+        <div className="flex items-baseline justify-between">
           <span className="inline-block bg-cyanvivid-200 text-cyanvivid-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
             Nueva
           </span>
-          <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
-            {hit.beds} camas &bull; {hit.baths} baños
-          </div>
+          <span className="inline-block  text-coldgray-400 text-xs px-2 font-semibold tracking-wide">
+            {hit.province}
+          </span>
+        </div>
+        <div className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wide">
+          {hit.beds} camas &bull; {hit.baths} baños
         </div>
         <div className="mt-1 font-semibold text-lg leading-tight truncate">
           <Highlight attribute="description" hit={hit} tagName="mark" />
         </div>
-        <div className="mt-1">
-          ${hit.price}
-          <span className="text-gray-600 text-sm"></span>
-        </div>
-        <div className="mt-4">
-          <span className="text-teal-600 font-semibold">{hit.stars}/5 estrellas</span>
-          <span className="text-gray-600 text-sm"> (78)</span>
+
+        <div className="flex mt-4 items-baseline justify-between">
+          <div className="">
+            <span className="text-teal-600 font-semibold">{hit.stars}/5 estrellas</span>
+            <span className="text-gray-600 text-sm"> (78)</span>
+          </div>
+          <div className="mt-1 ">
+            <span className="text-indigo-600 font-bold"> ${hit.price}</span>
+          </div>
         </div>
       </div>
     </div>
