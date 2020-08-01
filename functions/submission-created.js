@@ -7,8 +7,8 @@ exports.handler = (event, context, callback) => {
   // Do something with the email address and then
   // invoke the callback.
 
-  console.log(response);
-  console.log(process.env);
+  console.log('response', response);
+
   housesIndex
     .saveObject({
       name: 'from this shit',
@@ -22,7 +22,7 @@ exports.handler = (event, context, callback) => {
       province: 'La Habana',
     })
     .then(({ objectID }) => {
-      console.log(objectID);
+      console.log('objectID', objectID);
     });
 
   callback(null, {
