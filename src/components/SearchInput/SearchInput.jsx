@@ -3,10 +3,10 @@ import { connectSearchBox } from 'react-instantsearch-dom';
 
 import Transition from '../../Transition';
 
-const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, shouldShowBar }) => {
+const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler }) => {
   return (
     <Transition
-      show={shouldShowBar}
+      show={true}
       enter="transition ease-out duration-100 transform"
       enterFrom="opacity-0 scale-95"
       enterTo="opacity-100 scale-100"
@@ -30,7 +30,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
                   </svg>
                 </div>
                 <input
-                  className="form-input block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
+                  className="form-input rounded-full block bg-gray-900 text-white border-none pl-10 w-full mr-2 sm:text-sm"
                   placeholder="Buscar casas..."
                   type="search"
                   value={currentRefinement}
@@ -40,7 +40,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
                 />
                 <button
                   onClick={filterHandler}
-                  className="inline-flex items-center px-2.5 bg-gray-700 text-gray-100 rounded-md hover:bg-gray-600 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-gray-600 transition ease-in-out duration-150"
+                  className="inline-flex items-center rounded-full px-2.5 bg-gray-700 text-gray-100 rounded-md hover:bg-gray-600 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-gray-600 transition ease-in-out duration-150"
                 >
                   <svg
                     className="text-gray-500 mr-1 "

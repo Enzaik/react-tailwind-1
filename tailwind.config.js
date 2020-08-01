@@ -47,6 +47,17 @@ module.exports = {
           800: '#323F4B',
           900: '#1F2933',
         },
+        cyanvivid: {
+          100: '#C2FEF6',
+          200: '#93FDF2',
+          300: '#61F4EB',
+          400: '#3CE7E1',
+          500: '#1FD4D4',
+          600: '#10B5BA',
+          700: '#069AA4',
+          800: '#06818F',
+          900: '#05606E',
+        },
       },
       spacing: {
         content: '10rem',
@@ -54,7 +65,10 @@ module.exports = {
     },
   },
   variants: {
-    cursor: ['hover'],
+    cursor: ['hover', 'focus'],
+    borderRadius: ['focus'],
+    opacity: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
   },
   plugins: [
     require('@tailwindcss/ui')({

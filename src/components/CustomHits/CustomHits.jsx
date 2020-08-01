@@ -2,34 +2,44 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 import { Configure, Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
+import CustomCurrentRefinements from '../../Refinements';
+
 function Hit({ hit }) {
-  //@TODO: refactor to make generic
+  // @TODO: refactor to make generic
   return (
-    <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-xl hover:cursor-pointer sm:w-25">
+    <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
         <LazyLoad>
-          <img className="absolute h-48 w-full object-cover" src={hit.url} />
+          <img
+            className="absolute h-48 w-full object-cover transition duration-200 ease-in-out opacity-100 hover:opacity-50"
+            src={hit.url}
+          />
         </LazyLoad>
       </div>
       <div className="p-4">
-        <div className="flex items-baseline">
-          <span className="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
+        <div className="flex items-baseline justify-between">
+          <span className="inline-block bg-cyanvivid-200 text-cyanvivid-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
             Nueva
           </span>
-          <div className="ml-2 text-gray-600 text-xs uppercase font-semibold tracking-wide">
-            {hit.beds} camas &bull; {hit.baths} baños
-          </div>
+          <span className="inline-block  text-coldgray-400 text-xs px-2 font-semibold tracking-wide">
+            {hit.province}
+          </span>
         </div>
-        <h4 className="mt-1 font-semibold text-lg leading-tight truncate">
+        <div className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wide">
+          {hit.beds} camas &bull; {hit.baths} baños
+        </div>
+        <div className="mt-1 font-semibold text-lg leading-tight truncate">
           <Highlight attribute="description" hit={hit} tagName="mark" />
-        </h4>
-        <div className="mt-1">
-          ${hit.price}
-          <span className="text-gray-600 text-sm"> / wk</span>
         </div>
-        <div className="mt-4">
-          <span className="text-teal-600 font-semibold">{hit.stars}/5 estrellas</span>
-          <span className="text-gray-600 text-sm"> (78 comentarios)</span>
+
+        <div className="flex mt-4 items-baseline justify-between">
+          <div className="">
+            <span className="text-teal-600 font-semibold">{hit.stars}/5 estrellas</span>
+            <span className="text-gray-600 text-sm"> (78)</span>
+          </div>
+          <div className="mt-1 ">
+            <span className="text-indigo-600 font-bold"> ${hit.price}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -39,11 +49,14 @@ function Hit({ hit }) {
 const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
 const Hits = ({ hits }) => (
-  <div className="grid gap-2 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:max-w-none">
-    {hits.map((hit) => (
-      <HitWithInsights key={hit.objectID} hit={hit} />
-    ))}
-  </div>
+  <>
+    {/* <CustomCurrentRefinements /> */}
+    <div className="grid gap-5 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl xl:grid-cols-4 ">
+      {hits.map((hit) => (
+        <HitWithInsights key={hit.objectID} hit={hit} />
+      ))}
+    </div>
+  </>
 );
 
 const CustomHits = connectHits(Hits);

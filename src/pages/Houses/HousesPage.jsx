@@ -5,44 +5,39 @@ import Navbar from '../../components/Navbar/Navbar';
 import Filters from '../../components/Filters/Filters';
 const Houses = lazy(() => import('../../components/Houses/Houses'));
 
-function HousesComponent() {
-  const [isOpen, setIsOpen] = useState(false);
-  const prevScrollY = useRef(0);
-  const [goingUp, setGoingUp] = useState(true);
+function HousesComponent({ filter, isOpen, filterHandler, shouldShowBar }) {
+  // const prevScrollY = useRef(0);
+  // const [goingUp, setGoingUp] = useState(true);
 
-  const filterHandler = (e) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-  };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  //     if (prevScrollY.current < currentScrollY && goingUp) {
+  //       setGoingUp(false);
+  //     }
+  //     if (prevScrollY.current > currentScrollY && !goingUp) {
+  //       setGoingUp(true);
+  //     }
 
-      if (prevScrollY.current < currentScrollY && goingUp) {
-        setGoingUp(false);
-      }
-      if (prevScrollY.current > currentScrollY && !goingUp) {
-        setGoingUp(true);
-      }
+  //     prevScrollY.current = currentScrollY;
+  //   };
 
-      prevScrollY.current = currentScrollY;
-    };
+  //   window.addEventListener('scroll', handleScroll, { passive: true });
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [goingUp]);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [goingUp]);
-
-  let shouldShowBar = goingUp || window.scrollY === 0;
+  // let shouldShowBar = goingUp || window.scrollY === 0;
 
   return (
     <div className="h-screen">
       <div className="fixed w-full z-10">
+        {/* <Navbar filterHandler={filterHandler} shouldShowBar={shouldShowBar} /> */}
         <Navbar filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
         <div className="md:hidden">
-          <SearchInput filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
-          <Filters isOpen={isOpen} shouldShowBar={shouldShowBar} />
+          <SearchInput filterHandler={filterHandler} />
+          <Filters isOpen={isOpen} />
         </div>
       </div>
       <Suspense fallback={<div>Loading...</div>}>

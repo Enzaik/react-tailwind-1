@@ -30,7 +30,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
   };
 
   return (
-    <form className=" mt-2 sm:mt-0 sm:px-10 md:px-0 md:mt-0 ">
+    <form className=" mt-2 border-b border-gray-900 pb-6 sm:mt-0 sm:px-10 md:px-0 md:mt-0 ">
       <div className=" border-b border-gray-900 pb-6 sm:p-0 md:p-6 sm:border-b-0 md:border-b md:border-gray-900">
         <div className="text-gray-500 font-semibold">Precios</div>
         <div className="flex">
@@ -42,7 +42,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
               placeholder={min}
               min={min}
               max={max}
-              step={1 / Math.pow(10, precision)}
+              // step={1 / Math.pow(10, precision)}
               // value={refinement.min}
               onChange={(event) => {
                 setRefinement({
@@ -60,7 +60,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
               placeholder={max}
               min={min}
               max={max}
-              step={1 / Math.pow(10, precision)}
+              // step={1 / Math.pow(10, precision)}
               // value={refinement.max}
               onChange={(event) =>
                 setRefinement({

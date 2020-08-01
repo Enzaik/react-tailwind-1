@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 import MainSearchInput from '../../components/MainSearchInput/MainSearchInput';
 
 import logo from '../../img/logo.svg';
 import Transition from '../../Transition';
+
+const CategoriesMenu = lazy(() => import('../../components/CategoriesMenu/CategoriesMenu'));
 
 function Landing() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +72,6 @@ function Landing() {
             </svg>
           </div>
         </div>
-
         <div className="relative pt-6 pb-12 lg:pb-20">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
             <nav className="relative flex items-center justify-between sm:h-10 md:justify-center">
@@ -254,6 +255,8 @@ function Landing() {
             </div>
           </div>
         </div>
+        {/* <CategoriesMenu /> */}
+
         <div className="relative">
           <div className="absolute inset-0 flex flex-col">
             <div className="flex-1"></div>

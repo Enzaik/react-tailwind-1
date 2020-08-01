@@ -1,27 +1,31 @@
-import React, { lazy, Suspense } from 'react';
-import algoliasearch from 'algoliasearch/lite';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
+import algoliasearch from 'algoliasearch';
 
 import {
   // BrowserRouter as Router, Switch,
   Route,
   // Link
 } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
-import { InstantSearch } from 'react-instantsearch-dom';
+// import Navbar from './components/Navbar/Navbar';
+import { InstantSearch, browseObjects } from 'react-instantsearch-dom';
 
 // import ListItemHorizontal from './ListItemHorizontal';
 const Houses = lazy(() => import('./pages/Houses/HousesPage'));
 const Search = lazy(() => import('./Search'));
 const Pricing = lazy(() => import('./components/Pricing/Pricing'));
 const Landing = lazy(() => import('./pages/Landing/LandingPage'));
-// import Header from './Header';
-// import Dropdown from './components/Dropdown/Dropdown';
-// import Popup from './Popup';
-// import Product from './Product';
-// import Test from './Test';
+const CustomBreadcrumb = lazy(() => import('./BreadCrumbs'));
+const NewAd = lazy(() => import('./components/NewAd/NewAd'));
 
 function App() {
   const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
+  const housesIndex = searchClient.initIndex('houses');
+
+  const [isOpen, setIsOpen] = useState(false);
+  const filterHandler = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
   const componentsConfig = [
     {
       component: 'Pricing',
@@ -44,8 +48,13 @@ function App() {
       exact: false,
     },
     {
-      component: 'Landing ',
+      component: 'CustomBreadcrumb ',
       path: '/landing',
+      exact: false,
+    },
+    {
+      component: 'NewAd ',
+      path: '/newad',
       exact: false,
     },
   ];
@@ -62,29 +71,40 @@ function App() {
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
-              <Houses />
+              <Houses isOpen={isOpen} filterHandler={filterHandler} shouldShowBar={true} />
             </InstantSearch>
           </Route>
         );
       case '/search':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
-            <Navbar />
             <InstantSearch indexName="houses" searchClient={searchClient}>
               <Search />
+            </InstantSearch>
+          </Route>
+        );
+      case '/newad':
+        return (
+          <Route exact={componentConfig.exact} path={componentConfig.path}>
+            <InstantSearch indexName="houses" searchClient={searchClient}>
+              <NewAd shouldShowBar={false} housesIndex={housesIndex} />
             </InstantSearch>
           </Route>
         );
       case '/landing':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
-            <Landing />
+            <InstantSearch indexName="houses" searchClient={searchClient}>
+              <CustomBreadcrumb
+                attributes={['categories.lvl0', 'categories.lvl1', 'categories.lvl2', 'categories.lvl3']}
+              />
+            </InstantSearch>
           </Route>
         );
       default:
         return (
           <Route exact={true} path="/">
-            <InstantSearch indexName="houses" searchClient={searchClient}>
+            <InstantSearch indexName="searches" searchClient={searchClient}>
               <Landing />
             </InstantSearch>
           </Route>
@@ -93,7 +113,13 @@ function App() {
   };
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense
+      fallback={
+        <div className="flex flex-col h-screen justify-center">
+          <div className="flex justify-center">Cargando...</div>
+        </div>
+      }
+    >
       <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
         {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
       </div>
