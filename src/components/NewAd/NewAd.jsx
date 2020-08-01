@@ -20,7 +20,7 @@ function NewAd({ shouldShowBar }) {
               <select name="category" />
             </form>
 
-            <form method="POST" data-netlify="true">
+            <form method="post">
               <input type="hidden" name="form-name1" value="ad" />
               <div>
                 <div>
