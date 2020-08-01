@@ -30,7 +30,7 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
   };
 
   return (
-    <form className=" mt-2 sm:mt-0 sm:px-10 md:px-0 md:mt-0 ">
+    <form className=" mt-2 border-b border-gray-900 pb-6 sm:mt-0 sm:px-10 md:px-0 md:mt-0 ">
       <div className=" border-b border-gray-900 pb-6 sm:p-0 md:p-6 sm:border-b-0 md:border-b md:border-gray-900">
         <div className="text-gray-500 font-semibold">Precios</div>
         <div className="flex">

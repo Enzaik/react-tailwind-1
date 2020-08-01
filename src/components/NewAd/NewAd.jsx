@@ -20,7 +20,7 @@ function NewAd({ shouldShowBar }) {
               <select name="category" />
             </form>
 
-            <form method="post">
+            <form method="post" action="/">
               <input type="hidden" name="form-name" value="ad" />
               <div>
                 <div>
@@ -80,6 +80,7 @@ function NewAd({ shouldShowBar }) {
                           >
                             <option selected>La Habana</option>
                             <option>Matanzas</option>
+                            <option>Pinar del Río</option>
                           </select>
                         </div>
                       </div>
