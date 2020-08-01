@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../Navbar/Navbar';
 
-function NewAd({ shouldShowBar, housesIndex }) {
+function NewAd({ shouldShowBar }) {
   const truth = (
     <>
       <div className="fixed w-full z-30">
@@ -30,6 +30,7 @@ function NewAd({ shouldShowBar, housesIndex }) {
                       This information will be displayed publicly so be careful what you share.
                     </p>
                   </div>
+
                   <div class="mt-6 sm:mt-5">
                     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                       <label for="category" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
@@ -49,7 +50,23 @@ function NewAd({ shouldShowBar, housesIndex }) {
                       </div>
                     </div>
 
-                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                    <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                      <label for="price" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
+                        Precio
+                      </label>
+                      <div class="mt-1 sm:mt-0 sm:col-span-2">
+                        <div class="max-w-lg flex rounded-md shadow-sm">
+                          <input
+                            type="number"
+                            id="price"
+                            name="price"
+                            class="flex-1 form-input block w-full min-w-0  rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                       <label for="beds" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
                         No. de camas
                       </label>
@@ -57,24 +74,52 @@ function NewAd({ shouldShowBar, housesIndex }) {
                         <div class="max-w-lg flex rounded-md shadow-sm">
                           <select
                             id="beds"
+                            name="beds"
                             class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
                           >
-                            <option>1</option>
-                            <option selected>2</option>
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                      <label for="rooms" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
+                        No. de habitaciones
+                      </label>
+                      <div class="mt-1 sm:mt-0 sm:col-span-2">
+                        <div class="max-w-lg flex rounded-md shadow-sm">
+                          <select
+                            id="rooms"
+                            name="rooms"
+                            class="mt-1 form-select block w-full pl-3 pr-10 py-2 text-base leading-6 border-gray-300 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5"
+                          >
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                           </select>
                         </div>
                       </div>
                     </div>
 
                     <div class="mt-6 sm:mt-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                      <label for="about" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
+                      <label
+                        for="description"
+                        class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2"
+                      >
                         Descripción
                       </label>
                       <div class="mt-1 sm:mt-0 sm:col-span-2">
                         <div class="max-w-lg flex rounded-md shadow-sm">
                           <textarea
-                            name="text"
-                            id="about"
+                            name="description"
+                            id="description"
                             rows="3"
                             class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                           ></textarea>
@@ -87,6 +132,15 @@ function NewAd({ shouldShowBar, housesIndex }) {
                       <label for="photo" class="block text-sm leading-5 font-medium text-gray-700">
                         Photo
                       </label>
+                      <div class="mt-1 sm:mt-0 sm:col-span-2">
+                        <div class="max-w-lg flex rounded-md shadow-sm">
+                          <input
+                            id="photo"
+                            name="photo"
+                            class="flex-1 form-input block w-full min-w-0  rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5"
+                          />
+                        </div>
+                      </div>
                       <div class="mt-2 sm:mt-0 sm:col-span-2">
                         <div class="flex items-center">
                           <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
