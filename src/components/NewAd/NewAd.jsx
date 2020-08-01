@@ -73,6 +73,7 @@ function NewAd({ shouldShowBar }) {
                       <div class="mt-1 sm:mt-0 sm:col-span-2">
                         <div class="max-w-lg flex rounded-md shadow-sm">
                           <textarea
+                            name="text"
                             id="about"
                             rows="3"
                             class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
@@ -199,7 +200,7 @@ function NewAd({ shouldShowBar }) {
       </form>
     </>
   );
-  return wrong;
+  return truth;
 }
 
 export default NewAd;
