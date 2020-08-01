@@ -199,7 +199,7 @@ function NewAd({ shouldShowBar }) {
       </form>
     </>
   );
-  return truth;
+  return wrong;
 }
 
 export default NewAd;
