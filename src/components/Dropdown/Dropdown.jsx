@@ -19,7 +19,7 @@ function Dropdown() {
         >
           <img
             className="h-8 w-8 rounded-full object-cover"
-            src="https://images.unsplash.com/photo-1590626448634-7a9f6e56bb39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            src="https://images.unsplash.com/photo-1590626448634-7a9f6e56bb39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=50&q=60"
             alt=""
           />
         </button>
