@@ -1178,10 +1178,6 @@ video {
   border-color: rgba(81, 69, 205, var(--border-opacity));
 }
 
-.rounded-none {
-  border-radius: 0;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -1243,10 +1239,6 @@ video {
 
 .border-b {
   border-bottom-width: 1px;
-}
-
-.cursor-default {
-  cursor: default;
 }
 
 .hover\:cursor-pointer:hover {
@@ -1331,10 +1323,6 @@ video {
 
 .font-hindsiliguri {
   font-family: Hind Siliguri;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .font-medium {
@@ -1607,10 +1595,6 @@ video {
   margin-top: -4rem;
 }
 
-.max-h-60 {
-  max-height: 15rem;
-}
-
 .max-w-xs {
   max-width: 20rem;
 }
@@ -1673,10 +1657,6 @@ video {
 
 .focus\:outline-none:focus {
   outline: 0;
-}
-
-.overflow-auto {
-  overflow: auto;
 }
 
 .overflow-hidden {
@@ -1849,16 +1829,8 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.pt-8 {
-  padding-top: 2rem;
-}
-
 .pb-8 {
   padding-bottom: 2rem;
-}
-
-.pl-8 {
-  padding-left: 2rem;
 }
 
 .pt-10 {
@@ -1899,10 +1871,6 @@ video {
 
 .pb-48 {
   padding-bottom: 12rem;
-}
-
-.pl-1\.5 {
-  padding-left: 0.375rem;
 }
 
 .pb-5\/6 {
@@ -2286,11 +2254,6 @@ video {
   letter-spacing: 0.05em;
 }
 
-.select-none {
-  -webkit-user-select: none;
-          user-select: none;
-}
-
 .whitespace-no-wrap {
   white-space: nowrap;
 }
@@ -2596,10 +2559,6 @@ video {
     align-items: center;
   }
 
-  .sm\:items-baseline {
-    align-items: baseline;
-  }
-
   .sm\:items-stretch {
     align-items: stretch;
   }
@@ -2703,10 +2662,6 @@ video {
     margin-top: 1px;
   }
 
-  .sm\:max-w-xs {
-    max-width: 20rem;
-  }
-
   .sm\:max-w-sm {
     max-width: 24rem;
   }
@@ -2769,10 +2724,6 @@ video {
     padding-top: 1.25rem;
   }
 
-  .sm\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
   .sm\:static {
     position: static;
   }
@@ -2793,12 +2744,6 @@ video {
 
   .sm\:shadow-xl {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-
-  .sm\:text-gray-700 {
-    --text-opacity: 1;
-    color: #374151;
-    color: rgba(55, 65, 81, var(--text-opacity));
   }
 
   .sm\:w-12 {
