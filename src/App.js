@@ -1,11 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import algoliasearch from 'algoliasearch';
 
-import {
-  // BrowserRouter as Router, Switch,
-  Route,
-  // Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import Navbar from './components/Navbar/Navbar';
 import { InstantSearch, browseObjects } from 'react-instantsearch-dom';
 
@@ -120,9 +116,11 @@ function App() {
         </div>
       }
     >
-      <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
-        {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
-      </div>
+      <Router>
+        <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
+          {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
+        </div>
+      </Router>
     </Suspense>
   );
 }
