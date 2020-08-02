@@ -1563,10 +1563,6 @@ video {
   margin-top: 2rem;
 }
 
-.ml-8 {
-  margin-left: 2rem;
-}
-
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -2232,6 +2228,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .hover\:underline:hover {
@@ -3189,12 +3189,6 @@ video {
     .xl\:container {
       max-width: 1536px;
     }
-  }
-
-  .xl\:bg-white {
-    --bg-opacity: 1;
-    background-color: #ffffff;
-    background-color: rgba(255, 255, 255, var(--bg-opacity));
   }
 
   .xl\:block {

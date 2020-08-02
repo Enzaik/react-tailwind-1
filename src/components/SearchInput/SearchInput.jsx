@@ -61,7 +61,13 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler }
                 </button>
               </div>
 
-              {isSearchStalled ? <div className="px-2">Buscando...</div> : ''}
+              {isSearchStalled ? (
+                <div className="flex flex-col h-screen justify-center">
+                  <div className="flex justify-center">Buscando...</div>
+                </div>
+              ) : (
+                ''
+              )}
             </form>
           </div>
         </div>
