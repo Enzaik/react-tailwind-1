@@ -11,9 +11,9 @@ function Filters({ items, isFromSearch, refine, searchForItems, createURL, attri
         isOpen ? 'block' : 'hidden'
       } bg-gray-800 text-gray-300 w-full z-10 mx-auto px-6 pb-4 mt-0  border-gray-900`}
     >
-      <label>
-        <CustomRefinementList attribute="beds" searchable />
-      </label>
+      {/* <label> */}
+      <CustomRefinementList attribute="beds" searchable />
+      {/* </label> */}
     </div>
   );
 }
