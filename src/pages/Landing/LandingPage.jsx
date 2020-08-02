@@ -1,11 +1,8 @@
 import React, { useState, lazy, Suspense } from 'react';
-import { Link } from 'react-router-dom';
 import LazyLoad from 'react-lazyload';
 import MainSearchInput from '../../components/MainSearchInput/MainSearchInput';
 
-import logo from '../../img/logo.svg';
-import Transition from '../../Transition';
-
+const LandingDropdown = lazy(() => import('../../components/LandingDropdown/LandingDropdown'));
 const FromTheBlog = lazy(() => import('../../components/FromTheBlog/FromTheBlog'));
 const Footer = lazy(() => import('../../components/Footer/Footer'));
 // import FromTheBlog from '../../components/FromTheBlog/FromTheBlog';
@@ -159,95 +156,15 @@ function Landing() {
           From: "opacity-100 scale-100"
           To: "opacity-0 scale-95"
       --> */}
-          <Transition
-            show={isOpen}
-            enter="transition ease-out duration-100 transform"
-            enterFrom="opacity-0 scale-95"
-            enterTo="opacity-100 scale-100"
-            leave="transition ease-in duration-75 transform"
-            leaveFrom="opacity-100 scale-100"
-            leaveTo="opacity-0 scale-95"
-          >
-            <div className="absolute top-0 z-10 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-              <div className="rounded-lg shadow-md">
-                <div
-                  className="rounded-lg bg-white shadow-xs overflow-hidden"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="main-menu"
-                >
-                  <div className="px-5 pt-4 flex items-center justify-between">
-                    <div>
-                      <LazyLoad>
-                        <img
-                          className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                          alt=""
-                        />
-                      </LazyLoad>
-                    </div>
-                    <div className="-mr-2">
-                      <button
-                        type="button"
-                        onClick={handleClick}
-                        className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                        aria-label="Close menu"
-                      >
-                        <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div className="px-2 pt-2 pb-3">
-                    <a
-                      href="#"
-                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Product
-                    </a>
-                    <a
-                      href="#"
-                      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Features
-                    </a>
-                    <a
-                      href="#"
-                      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Marketplace
-                    </a>
-                    <a
-                      href="#"
-                      className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Company
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="#"
-                      className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
-                      role="menuitem"
-                    >
-                      Log in
-                    </a>
-                  </div>
-                </div>
+          <Suspense
+            fallback={
+              <div className="flex flex-col h-screen justify-center">
+                <div className="flex justify-center">Cargando...</div>
               </div>
-            </div>
-          </Transition>
-
+            }
+          >
+            <LandingDropdown isOpen={isOpen} handleClick={handleClick} />
+          </Suspense>
           <div className="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-16 lg:mt-20">
             <div className="text-center">
               <h2 className="text-3xl sm:text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-4xl sm:leading-none md:text-5xl">
