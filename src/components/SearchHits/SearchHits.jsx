@@ -4,7 +4,7 @@ import CustomHits from '../CustomHits/CustomHits';
 const VerticalFilter = lazy(() => import('../Filters/VerticalFilter'));
 const CustomCurrentRefinements = lazy(() => import('../../Refinements'));
 
-function Houses({ shouldShowBar }) {
+function SearchHits({ label, category, details }) {
   return (
     <>
       <Suspense
@@ -18,20 +18,20 @@ function Houses({ shouldShowBar }) {
         <div className="block md:hidden">
           <main className="max-w-7xl pt-content mx-auto px-4 py-6 sm:px-6 md:ml-1/5 lg:px-8 ">
             <div className="flex px-2 justify-between items-baseline ">
-              <div className="font-semibold">Casas</div>
+              <div className="font-semibold">{label}</div>
               <div className="text-sm text-indigo-600">Ver más</div>
             </div>
-            <CustomHits />
+            <CustomHits details={details} />
           </main>
         </div>
         <div className="hidden md:block">
           <main className=" pt-24 mx-auto py-6 sm:px-6 margin-filter lg:px-8">
             <div className="flex max-w-5xl mx-auto px-2 justify-between items-baseline">
-              <div className="font-semibold text-3xl">Casas</div>
+              <div className="font-semibold text-3xl">{label}</div>
               <CustomCurrentRefinements />
               <div className="text-sm text-indigo-600">Ver más</div>
             </div>
-            <CustomHits />
+            <CustomHits details={details} />
           </main>
         </div>
       </Suspense>
@@ -39,4 +39,4 @@ function Houses({ shouldShowBar }) {
   );
 }
 
-export default Houses;
+export default SearchHits;

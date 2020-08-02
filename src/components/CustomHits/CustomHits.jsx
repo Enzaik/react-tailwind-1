@@ -1,11 +1,11 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import { Configure, Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
+import { Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
-import CustomCurrentRefinements from '../../Refinements';
-
-function Hit({ hit }) {
+function Hit({ hit, details }) {
+  let counter = 0;
+  let bullet = '';
   // @TODO: refactor to make generic
   return (
     <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
@@ -25,7 +25,14 @@ function Hit({ hit }) {
           </span>
         </div>
         <div className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wide">
-          {hit.beds} camas &bull; {hit.baths} baños
+          {details.map((detail) => {
+            bullet = counter > 0 ? ' • ' : '';
+            console.log(counter);
+
+            counter++;
+            return `${bullet} ${hit[detail]} ${detail}`;
+          })}
+          {/* {hit.beds} camas &bull; {hit.baths} baños */}
         </div>
         <div className="mt-1 font-semibold text-lg leading-tight truncate">
           <Highlight attribute="description" hit={hit} tagName="mark" />
@@ -47,12 +54,11 @@ function Hit({ hit }) {
 
 const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
-const Hits = ({ hits }) => (
+const Hits = ({ hits, details }) => (
   <>
-    {/* <CustomCurrentRefinements /> */}
     <div className="grid gap-5 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl xl:grid-cols-4 ">
       {hits.map((hit) => (
-        <HitWithInsights key={hit.objectID} hit={hit} />
+        <HitWithInsights key={hit.objectID} hit={hit} details={details} />
       ))}
     </div>
   </>
