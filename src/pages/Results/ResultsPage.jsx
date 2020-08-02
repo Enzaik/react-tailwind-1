@@ -5,7 +5,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Filters from '../../components/Filters/Filters';
 const SearchHits = lazy(() => import('../../components/SearchHits/SearchHits'));
 
-function SearchHitsComponent({ filter, isOpen, filterHandler, shouldShowBar }) {
+function SearchHitsComponent({ filter, isOpen, filterHandler, shouldShowBar, config }) {
   // const prevScrollY = useRef(0);
   // const [goingUp, setGoingUp] = useState(true);
 
@@ -29,7 +29,6 @@ function SearchHitsComponent({ filter, isOpen, filterHandler, shouldShowBar }) {
   // }, [goingUp]);
 
   // let shouldShowBar = goingUp || window.scrollY === 0;
-  const houseDetailsConfig = ['beds', 'baths'];
 
   return (
     <div className="h-screen">
@@ -41,7 +40,7 @@ function SearchHitsComponent({ filter, isOpen, filterHandler, shouldShowBar }) {
         </div>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
-        <SearchHits label="Casas" category="houses" details={houseDetailsConfig} />
+        <SearchHits label={config.label} category="houses" details={config.items} />
       </Suspense>
     </div>
   );

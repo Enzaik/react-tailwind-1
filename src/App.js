@@ -2,11 +2,9 @@ import React, { lazy, Suspense, useEffect, useState } from 'react';
 import algoliasearch from 'algoliasearch';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import Navbar from './components/Navbar/Navbar';
 import { InstantSearch, browseObjects } from 'react-instantsearch-dom';
 
-// import ListItemHorizontal from './ListItemHorizontal';
-const Houses = lazy(() => import('./pages/Houses/HousesPage'));
+const Houses = lazy(() => import('./pages/Results/ResultsPage'));
 const Search = lazy(() => import('./Search'));
 const Pricing = lazy(() => import('./components/Pricing/Pricing'));
 const Landing = lazy(() => import('./pages/Landing/LandingPage'));
@@ -31,6 +29,10 @@ function App() {
     {
       component: 'Houses',
       path: '/houses',
+      config: {
+        items: ['beds', 'baths'],
+        label: 'Casas',
+      },
       exact: true,
     },
     {
@@ -67,7 +69,12 @@ function App() {
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
-              <Houses isOpen={isOpen} filterHandler={filterHandler} shouldShowBar={true} />
+              <Houses
+                isOpen={isOpen}
+                filterHandler={filterHandler}
+                shouldShowBar={true}
+                config={componentConfig.config}
+              />
             </InstantSearch>
           </Route>
         );
