@@ -109,19 +109,19 @@ function App() {
   };
 
   return (
-    <Suspense
-      fallback={
-        <div className="flex flex-col h-screen justify-center">
-          <div className="flex justify-center">Cargando...</div>
-        </div>
-      }
-    >
-      <Router>
+    <Router>
+      <Suspense
+        fallback={
+          <div className="flex flex-col h-screen justify-center">
+            <div className="flex justify-center">Cargando...</div>
+          </div>
+        }
+      >
         <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
           {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
         </div>
-      </Router>
-    </Suspense>
+      </Suspense>
+    </Router>
   );
 }
 
