@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Transition from '../../Transition';
 
 function Dropdown() {
@@ -17,7 +19,7 @@ function Dropdown() {
           aria-label="User menu"
           aria-haspopup="true"
         >
-          <img
+          <LazyLoadImage
             className="h-8 w-8 rounded-full object-cover"
             src="https://images.unsplash.com/photo-1590626448634-7a9f6e56bb39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=50&q=60"
             alt=""

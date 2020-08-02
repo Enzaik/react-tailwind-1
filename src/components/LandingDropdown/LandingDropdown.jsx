@@ -1,5 +1,5 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Transition from '../../Transition';
 
@@ -24,13 +24,11 @@ function LandingDropdown({ isOpen, handleClick }) {
           >
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
-                <LazyLoad>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                    alt=""
-                  />
-                </LazyLoad>
+                <LazyLoadImage
+                  className="h-8 w-auto"
+                  src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
+                  alt=""
+                />
               </div>
               <div className="-mr-2">
                 <button

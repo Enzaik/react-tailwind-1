@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LazyLoad from 'react-lazyload';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function FromTheBlog() {
   return (
@@ -20,13 +20,11 @@ function FromTheBlog() {
         <div className="mt-12 grid gap-5  mx-auto md:grid-cols-3 lg:max-w-none">
           <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div className="flex-shrink-0">
-              <LazyLoad>
-                <img
-                  className="h-48 w-full object-cover"
-                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
-                  alt=""
-                />
-              </LazyLoad>
+              <LazyLoadImage
+                className="h-48 w-full object-cover"
+                src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                alt=""
+              />
             </div>
             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
               <div className="flex-1">
@@ -46,13 +44,11 @@ function FromTheBlog() {
               <div className="mt-6 flex items-center">
                 <div className="flex-shrink-0">
                   <a href="#">
-                    <LazyLoad>
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </LazyLoad>
+                    <LazyLoadImage
+                      className="h-10 w-10 rounded-full"
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt=""
+                    />
                   </a>
                 </div>
                 <div className="ml-3">
@@ -72,13 +68,11 @@ function FromTheBlog() {
           </div>
           <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div className="flex-shrink-0">
-              <LazyLoad>
-                <img
-                  className="h-48 w-full object-cover"
-                  src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                  alt=""
-                />
-              </LazyLoad>
+              <LazyLoadImage
+                className="h-48 w-full object-cover"
+                src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                alt=""
+              />
             </div>
             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
               <div className="flex-1">
@@ -101,13 +95,11 @@ function FromTheBlog() {
               <div className="mt-6 flex items-center">
                 <div className="flex-shrink-0">
                   <a href="#">
-                    <LazyLoad>
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </LazyLoad>
+                    <LazyLoadImage
+                      className="h-10 w-10 rounded-full"
+                      src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt=""
+                    />
                   </a>
                 </div>
                 <div className="ml-3">
@@ -127,13 +119,11 @@ function FromTheBlog() {
           </div>
           <div className="flex flex-col rounded-lg shadow-lg overflow-hidden">
             <div className="flex-shrink-0">
-              <LazyLoad>
-                <img
-                  className="h-48 w-full object-cover"
-                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-                  alt=""
-                />
-              </LazyLoad>
+              <LazyLoadImage
+                className="h-48 w-full object-cover"
+                src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                alt=""
+              />
             </div>
             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
               <div className="flex-1">
@@ -156,13 +146,11 @@ function FromTheBlog() {
               <div className="mt-6 flex items-center">
                 <div className="flex-shrink-0">
                   <a href="#">
-                    <LazyLoad>
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </LazyLoad>
+                    <LazyLoadImage
+                      className="h-10 w-10 rounded-full"
+                      src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt=""
+                    />
                   </a>
                 </div>
                 <div className="ml-3">
