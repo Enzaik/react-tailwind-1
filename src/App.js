@@ -1,11 +1,7 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import algoliasearch from 'algoliasearch';
 
-import {
-  // BrowserRouter as Router, Switch,
-  Route,
-  // Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import Navbar from './components/Navbar/Navbar';
 import { InstantSearch, browseObjects } from 'react-instantsearch-dom';
 
@@ -113,17 +109,19 @@ function App() {
   };
 
   return (
-    <Suspense
-      fallback={
-        <div className="flex flex-col h-screen justify-center">
-          <div className="flex justify-center">Cargando...</div>
+    <Router>
+      <Suspense
+        fallback={
+          <div className="flex flex-col h-screen justify-center">
+            <div className="flex justify-center">Cargando...</div>
+          </div>
+        }
+      >
+        <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
+          {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
         </div>
-      }
-    >
-      <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
-        {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
-      </div>
-    </Suspense>
+      </Suspense>
+    </Router>
   );
 }
 

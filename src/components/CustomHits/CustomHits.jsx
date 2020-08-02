@@ -1,5 +1,6 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import { Configure, Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
 import CustomCurrentRefinements from '../../Refinements';
@@ -9,12 +10,10 @@ function Hit({ hit }) {
   return (
     <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
-        <LazyLoad>
-          <img
-            className="absolute h-48 w-full object-cover transition duration-200 ease-in-out opacity-100 hover:opacity-50"
-            src={hit.url}
-          />
-        </LazyLoad>
+        <LazyLoadImage
+          className="absolute h-48 w-full object-cover transition duration-200 ease-in-out opacity-100 hover:opacity-50"
+          src={hit.url}
+        />
       </div>
       <div className="p-4">
         <div className="flex items-baseline justify-between">
