@@ -27,10 +27,8 @@ function Hit({ hit, details }) {
         <div className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wide">
           {details.map((detail) => {
             bullet = counter > 0 ? ' • ' : '';
-            console.log(counter);
-
             counter++;
-            return `${bullet} ${hit[detail]} ${detail}`;
+            return `${bullet} ${hit[detail.id]} ${detail.label}`;
           })}
           {/* {hit.beds} camas &bull; {hit.baths} baños */}
         </div>

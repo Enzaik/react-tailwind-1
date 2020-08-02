@@ -18,7 +18,6 @@ const CurrentRefinements = ({ items, refine, createURL }) => {
   return (
     <div className="flex">
       {newItems.map((item) => {
-        console.log(item);
         filterCounter++;
         return (
           <>

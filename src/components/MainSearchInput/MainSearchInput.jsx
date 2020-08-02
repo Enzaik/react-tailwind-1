@@ -8,11 +8,8 @@ import CustomHighlight from '../CustomHighlight/CustomHighlight';
 function MainSearchInput({ hits, currentRefinement, refine }) {
   const [value, setValue] = useState('');
   const [areSearchResults, setAreSearchResults] = useState(false);
-  useEffect(() => {
-    console.log(hits);
-  }, []);
+
   const inputHandle = (e, hits) => {
-    console.log(hits, e.target.value.length);
     setAreSearchResults(hits.length, e.target.value.length);
     setValue(e.target.value);
     refine(e.currentTarget.value);

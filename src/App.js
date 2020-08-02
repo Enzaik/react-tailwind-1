@@ -4,7 +4,7 @@ import algoliasearch from 'algoliasearch';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { InstantSearch, browseObjects } from 'react-instantsearch-dom';
 
-const Houses = lazy(() => import('./pages/Results/ResultsPage'));
+const ResultsPage = lazy(() => import('./pages/Results/ResultsPage'));
 const Search = lazy(() => import('./Search'));
 const Pricing = lazy(() => import('./components/Pricing/Pricing'));
 const Landing = lazy(() => import('./pages/Landing/LandingPage'));
@@ -27,16 +27,20 @@ function App() {
       exact: true,
     },
     {
-      component: 'Houses',
+      component: 'ResultsPage',
       path: '/houses',
       config: {
-        items: ['beds', 'baths'],
+        items: [
+          { id: 'beds', label: 'Camas', filtrable: true },
+          { id: 'baths', label: 'Baños', filtrable: true },
+        ],
         label: 'Casas',
+        category: 'houses',
       },
       exact: true,
     },
     {
-      component: 'Houses ',
+      component: 'ResultsPage ',
       path: '/',
       exact: false,
     },
@@ -68,8 +72,8 @@ function App() {
       case '/houses':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
-            <InstantSearch indexName="houses" searchClient={searchClient}>
-              <Houses
+            <InstantSearch indexName={componentConfig.config.category} searchClient={searchClient}>
+              <ResultsPage
                 isOpen={isOpen}
                 filterHandler={filterHandler}
                 shouldShowBar={true}
