@@ -10,7 +10,7 @@ const Filters = ({ config }) => {
       <div className="w-full h-full bg-gray-800 ">
         <div className="flex justify-center py-3 h-16 border-b border-gray-900">
           <Link to={'/'}>
-            <img className="block lg:hidden h-10 w-auto" src={logo} alt="Workflow logo" />
+            <img className="block h-10 w-auto" src={logo} alt="Workflow logo" />
           </Link>
         </div>
         <CustomRefinementList config={config} searchable />
