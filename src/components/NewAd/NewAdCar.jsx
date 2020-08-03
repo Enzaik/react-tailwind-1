@@ -19,7 +19,7 @@ function NewAd({ shouldShowBar }) {
 
             <form method="post" action="/">
               <div class="mt-2 shadow-md sm:rounded-md sm:overflow-hidden ">
-                <input type="hidden" name="form-name" value="carad" />
+                <input type="hidden" name="form-name" value="cars" />
                 <div class="px-4 py-5 bg-white sm:p-6">
                   {/*  <div>
                      <h3 class="text-lg leading-6 font-medium text-gray-900">Profile</h3>
