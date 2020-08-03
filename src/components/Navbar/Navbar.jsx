@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
@@ -8,8 +8,24 @@ import Dropdown from '../Dropdown/Dropdown';
 import RangeInput from '../../RangeInput';
 import SearchInputLargeScreen from '../../components/SearchInput/SearchInputLargeScreen';
 
+const linksConfig = [
+  { to: '/houses', label: 'Casas' },
+  { to: '/cars', label: 'Autos' },
+  { to: '/newad', label: 'Nuevo anuncio' },
+  { to: '/newad-car', label: 'Nuevo anuncio' },
+];
+
 function Navbar({ filterHandler = null, shouldShowBar }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
+  useEffect(() => {
+    console.log(window.location.pathname);
+    setActiveLink(window.location.pathname);
+  });
+  let counterLarge = 0;
+  let counterMobile = 0;
+  let orderClass = '';
+
   return (
     <nav className="bg-gray-900 shadow z-20 top-0 md:bg-white">
       <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -57,25 +73,20 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
             )}
 
             <div className="hidden sm:ml-6 sm:flex">
-              <Link
-                to="/houses"
-                className="inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out"
-              >
-                Casas
-              </Link>
-              <Link
-                to="/pricing"
-                className="ml-5 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-              >
-                Precios
-              </Link>
-
-              <Link
-                to="/newad"
-                className="ml-5 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out"
-              >
-                Nuevo anuncio
-              </Link>
+              {linksConfig.map(({ to, label }) => {
+                orderClass = counterLarge > 1 ? 'ml-5' : '';
+                counterLarge++;
+                return (
+                  <Link
+                    to={to}
+                    className={`${orderClass} ${
+                      to === activeLink ? 'border-b-2 border-indigo-500' : ''
+                    } inline-flex items-center px-1 pt-1  text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out`}
+                  >
+                    {label}
+                  </Link>
+                );
+              })}
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -110,25 +121,38 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
       ></button>
       <div className={`${isMobileMenuOpen ? 'absolute' : 'hidden'} absolute w-full bg-white sm:hidden z-20`}>
         <div className="pt-2 pb-4 ">
-          <Link
+          {linksConfig.map(({ to, label }) => {
+            orderClass = counterMobile > 1 ? 'mt-1' : '';
+            counterMobile++;
+            return (
+              <Link
+                to={to}
+                className={`block pl-3 pr-4 py-2 ${
+                  to === activeLink ? 'border-l-4 border-indigo-500' : ''
+                } text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out`}
+              >
+                {label}
+              </Link>
+            );
+          })}
+          {/* <Link
             to="/houses"
             className="block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out"
           >
             Casas
-            {/* remove hardcode */}
           </Link>
           <Link
-            to="/pricing"
+            to="/autos"
             className="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
           >
-            Precios
+            Autos
           </Link>
           <Link
             to="/newad"
             className="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
           >
             Nuevo anuncio
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>

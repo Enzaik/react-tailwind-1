@@ -9,7 +9,9 @@ const RefinementList = ({ config }) => {
   return (
     <div className="sm:flex md:block">
       {config.items.map((item) => {
-        return item.filtrable ? <GenericInput attribute={item.id} label={item.label} /> : null;
+        return item.filtrable ? (
+          <GenericInput attribute={item.id} label={item.label} showLabel={item.showLabel} />
+        ) : null;
       })}
       <RangeInput attribute="price" />
       <ProvinceInput attribute="province" searchable />

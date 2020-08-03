@@ -1,7 +1,7 @@
 import React from 'react';
 import { Highlight, connectRefinementList } from 'react-instantsearch-dom';
 
-function GenericInput({ items, refine, attribute, label, isFromSearch }) {
+function GenericInput({ items, refine, attribute, label, isFromSearch, showLabel }) {
   return (
     <div className="px-0 p-6 border-b border-gray-900 sm:p-0 sm:px-2 sm:border-b-0 md:border-b md:border-gray-900 md:p-6 ">
       <label className="text-gray-500 font-semibold">{label}</label>
@@ -25,7 +25,7 @@ function GenericInput({ items, refine, attribute, label, isFromSearch }) {
                     className={`${item.isRefined ? 'font-bold text-gray-100' : 'font-semibold text-gray-400'}  ml-2`}
                   >
                     {isFromSearch ? <Highlight attribute="label" hit={item} /> : item.label}{' '}
-                    <span className="lowercase">{label}</span>
+                    {showLabel && <span className="lowercase">{label}</span>}
                   </label>
                 </div>
                 <span

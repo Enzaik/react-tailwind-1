@@ -68,7 +68,7 @@ function Hit({ hit }) {
   return (
     <tr className="hover:bg-gray-100">
       <td key={hit.objectID} className="px-6 py-4 text-left whitespace-no-wrap text-md leading-5 text-gray-900">
-        <Link to="/houses">
+        <Link to={`${hit.to}`}>
           <CustomHighlight attribute="description" hit={hit} tagName="mark" />
         </Link>
       </td>

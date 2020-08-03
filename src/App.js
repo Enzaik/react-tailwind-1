@@ -32,8 +32,8 @@ function App() {
       path: '/houses',
       config: {
         items: [
-          { id: 'beds', label: 'Camas', filtrable: true },
-          { id: 'baths', label: 'Baños', filtrable: true },
+          { id: 'beds', label: 'Camas', filtrable: true, showLabel: true },
+          { id: 'baths', label: 'Baños', filtrable: true, showLabel: true },
         ],
         label: 'Casas',
         category: 'houses',
@@ -44,7 +44,7 @@ function App() {
       component: 'ResultsPage',
       path: '/cars',
       config: {
-        items: [{ id: 'year', label: 'Año', filtrable: true }],
+        items: [{ id: 'year', label: 'Año', filtrable: true, showLabel: false }],
         label: 'Autos',
         category: 'cars',
       },
