@@ -20,9 +20,7 @@ function Hit({ hit, details }) {
           <span className="inline-block bg-cyanvivid-200 text-cyanvivid-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">
             Nueva
           </span>
-          <span className="inline-block  text-coldgray-400 text-xs px-2 font-semibold tracking-wide">
-            {hit.province}
-          </span>
+          <span className="inline-block  text-coldgray-400 px-2 font-semibold tracking-wide">{hit.province}</span>
         </div>
         <div className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wide">
           {details.map((detail) => {

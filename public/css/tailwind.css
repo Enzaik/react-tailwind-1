@@ -13,6 +13,10 @@
   align-self: flex-start;
 }
 
+.top-76 {
+  top: 76px;
+}
+
 .margin-filter {
   margin-left: 240px;
 }

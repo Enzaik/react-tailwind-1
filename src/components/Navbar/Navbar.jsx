@@ -64,7 +64,6 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
             <div className="flex-shrink-0 flex items-center">
               <Link to={'/'}>
                 <img className="block lg:hidden h-8 w-auto" src={logo} alt="Workflow logo" />
-                <img className="hidden lg:block h-8 w-auto" src={logo} alt="Workflow logo" />
               </Link>
             </div>
 
