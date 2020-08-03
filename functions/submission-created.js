@@ -10,23 +10,23 @@ exports.handler = (event, context, callback) => {
   console.log('response', response);
   const { data } = response;
 
-  housesIndex
-    .saveObject(
-      {
-        name: data.category,
-        price: +data.price,
-        beds: data.beds,
-        baths: data.baths,
-        description: data.description,
-        stars: 5,
-        url: data.photo,
-        province: data.province,
-      },
-      { autoGenerateObjectIDIfNotExist: true }
-    )
-    .then(({ objectID }) => {
-      console.log('objectID', objectID);
-    });
+  // housesIndex
+  //   .saveObject(
+  //     {
+  //       name: data.category,
+  //       price: +data.price,
+  //       beds: data.beds,
+  //       baths: data.baths,
+  //       description: data.description,
+  //       stars: 5,
+  //       url: data.photo,
+  //       province: data.province,
+  //     },
+  //     { autoGenerateObjectIDIfNotExist: true }
+  //   )
+  //   .then(({ objectID }) => {
+  //     console.log('objectID', objectID);
+  //   });
 
   callback(null, {
     statusCode: 200,

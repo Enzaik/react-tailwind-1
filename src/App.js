@@ -9,7 +9,8 @@ const Search = lazy(() => import('./Search'));
 const Pricing = lazy(() => import('./components/Pricing/Pricing'));
 const Landing = lazy(() => import('./pages/Landing/LandingPage'));
 const CustomBreadcrumb = lazy(() => import('./BreadCrumbs'));
-const NewAd = lazy(() => import('./components/NewAd/NewAd'));
+const NewAd = lazy(() => import('./components/NewAd/NewAdHouse'));
+const NewAdCar = lazy(() => import('./components/NewAd/NewAdCar'));
 
 function App() {
   const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
@@ -40,6 +41,16 @@ function App() {
       exact: true,
     },
     {
+      component: 'ResultsPage',
+      path: '/cars',
+      config: {
+        items: [{ id: 'year', label: 'Año', filtrable: true }],
+        label: 'Autos',
+        category: 'cars',
+      },
+      exact: true,
+    },
+    {
       component: 'ResultsPage ',
       path: '/',
       exact: false,
@@ -57,6 +68,11 @@ function App() {
     {
       component: 'NewAd ',
       path: '/newad',
+      exact: false,
+    },
+    {
+      component: 'NewAdCar ',
+      path: '/newad-car',
       exact: false,
     },
   ];
@@ -82,6 +98,19 @@ function App() {
             </InstantSearch>
           </Route>
         );
+      case '/cars':
+        return (
+          <Route exact={componentConfig.exact} path={componentConfig.path}>
+            <InstantSearch indexName={componentConfig.config.category} searchClient={searchClient}>
+              <ResultsPage
+                isOpen={isOpen}
+                filterHandler={filterHandler}
+                shouldShowBar={true}
+                config={componentConfig.config}
+              />
+            </InstantSearch>
+          </Route>
+        );
       case '/search':
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
@@ -95,6 +124,14 @@ function App() {
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
               <NewAd shouldShowBar={false} housesIndex={housesIndex} />
+            </InstantSearch>
+          </Route>
+        );
+      case '/newad-car':
+        return (
+          <Route exact={componentConfig.exact} path={componentConfig.path}>
+            <InstantSearch indexName="cars" searchClient={searchClient}>
+              <NewAdCar shouldShowBar={false} housesIndex={housesIndex} />
             </InstantSearch>
           </Route>
         );
