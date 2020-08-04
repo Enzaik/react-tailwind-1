@@ -25,7 +25,13 @@ function Landing() {
 
   return (
     <div className="bg-gray-50">
-      <div className="relative overflow-hidden h-screen">
+      <div
+        className="relative overflow-hidden h-screen"
+        style={{
+          background:
+            'url(https://images.unsplash.com/photo-1433838552652-f9a46b332c40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=60)',
+        }}
+      >
         <div className="block absolute inset-y-0 h-full w-full">
           <div className="relative h-full">
             <svg
