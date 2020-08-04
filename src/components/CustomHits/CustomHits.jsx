@@ -8,7 +8,7 @@ function Hit({ hit, details }) {
   let bullet = '';
   // @TODO: refactor to make generic
   return (
-    <div className="bg-white rounded-lg overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
+    <div className="bg-white rounded-lg mb-4 overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
         <LazyLoadImage
           className="absolute h-48 w-full object-cover transition duration-200 ease-in-out opacity-100 hover:opacity-50"
@@ -52,7 +52,7 @@ const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
 const Hits = ({ hits, details }) => (
   <>
-    <div className="grid gap-5 border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl xl:grid-cols-4 ">
+    <div className="grid border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl xl:grid-cols-4 ">
       {hits.map((hit) => (
         <HitWithInsights key={hit.objectID} hit={hit} details={details} />
       ))}

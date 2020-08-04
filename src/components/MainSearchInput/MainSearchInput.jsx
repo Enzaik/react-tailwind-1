@@ -32,7 +32,7 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
         autoComplete="off"
         onChange={(e) => inputHandle(e, hits)}
         value={currentRefinement}
-        className={`block sticky top-0 form-input rounded-full shadow-md focus:shadow-lg focus:outline-none focus:border-indigo-700 h-13 text-sm min-w-full pl-10 sm:leading-5 sm:text-md bg-coldgray-200 border-none focus:bg-white`}
+        className={`block sticky top-0 form-input rounded-full shadow-md focus:shadow-lg focus:outline-none focus:border-indigo-700 h-13 text-sm min-w-full pl-10 sm:leading-5 sm:text-md border-none focus:bg-white`}
         placeholder="Busca casas, autos o cualquier cosa"
       />
       <table className="min-w-full mt-1 rounded-md overflow-hidden shadow-sm">

@@ -174,8 +174,8 @@ function Landing() {
           <div className="mt-10 mx-auto max-w-screen-xl px-4 sm:px-6 md:mt-16 lg:mt-20">
             <div className="text-center">
               <h2 className="text-3xl sm:text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-4xl sm:leading-none md:text-5xl">
-                La búsqueda de clasificados
-                <div className="text-indigo-600">más rápida de Cuba</div>
+                La búsqueda de anuncios
+                <div className="text-indigo-600">más precisa y rápida de Cuba</div>
               </h2>
               <MainSearchInput />
             </div>
