@@ -22,7 +22,7 @@ function SearchHits({ label, category, details, config }) {
         <div className="block md:hidden">
           <main className="max-w-7xl pt-content mx-auto px-4 py-6 sm:px-6 md:ml-1/5 lg:px-8 ">
             <div className="flex px-2 justify-between items-baseline ">
-              <div className="text-2xl font-semibold">{label}</div>
+              <div className="text-2xl font-semibold text-gray-600">{label}</div>
               <div className="flex">
                 <SortingButton
                   isSmall={true}
@@ -40,7 +40,7 @@ function SearchHits({ label, category, details, config }) {
           <main className=" pt-24 mx-auto py-6 sm:px-6 margin-filter lg:px-8">
             {/* <div className="sticky top-76 z-20 flex max-w-5xl mx-auto px-2 justify-between items-baseline"> */}
             <div className="top-76 z-20 flex max-w-5xl mx-auto px-2 justify-between">
-              <div className="font-semibold text-3xl">{label}</div>
+              <div className="font-semibold text-3xl text-gray-600">{label}</div>
               <CustomCurrentRefinements />
               <div className="flex">
                 <SortingButton
