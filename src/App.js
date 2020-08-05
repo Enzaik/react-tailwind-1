@@ -39,8 +39,8 @@ function App() {
         category: 'houses',
         defaultSearch: 'instant_search',
         indexesConfig: [
-          { value: 'instant_search_cars_price_asc', label: 'Precio asc.' },
-          { value: 'instant_search_cars_price_desc', label: 'Precio desc.' },
+          { value: 'instant_search_price_asc', label: 'Precio asc.' },
+          { value: 'instant_search_price_desc', label: 'Precio desc.' },
         ],
       },
       exact: true,
