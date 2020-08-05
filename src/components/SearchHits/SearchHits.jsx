@@ -1,5 +1,4 @@
 import React, { lazy, Suspense, useState } from 'react';
-import { connectSortBy } from 'react-instantsearch-dom';
 
 import CustomHits from '../CustomHits/CustomHits';
 import SortingButton from '../SortingButton';
@@ -9,6 +8,7 @@ const CustomCurrentRefinements = lazy(() => import('../../Refinements'));
 
 function SearchHits({ label, category, details, config }) {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <Suspense
@@ -38,11 +38,8 @@ function SearchHits({ label, category, details, config }) {
                 <SortingButton
                   isOpen={isOpen}
                   setIsOpen={setIsOpen}
-                  defaultRefinement="instant_search"
-                  items={[
-                    { value: 'instant_search_price_asc', label: 'Precio asc.' },
-                    { value: 'instant_search_price_desc', label: 'Precio desc.' },
-                  ]}
+                  defaultRefinement={config.defaultSearch}
+                  items={config.indexesConfig}
                 />
               </div>
             </div>
@@ -73,8 +70,4 @@ const SortBy = ({ items, refine, createURL }) => (
   </ul>
 );
 
-// const ConnectedSearchHits = connectSortBy(SearchHits);
-const ConnectedSearchHits = connectSortBy(SortBy);
-
-// export default ConnectedSearchHits;
 export default SearchHits;

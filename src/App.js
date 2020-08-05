@@ -37,6 +37,11 @@ function App() {
         ],
         label: 'Casas',
         category: 'houses',
+        defaultSearch: 'instant_search',
+        indexesConfig: [
+          { value: 'instant_search_cars_price_asc', label: 'Precio asc.' },
+          { value: 'instant_search_cars_price_desc', label: 'Precio desc.' },
+        ],
       },
       exact: true,
     },
@@ -47,6 +52,11 @@ function App() {
         items: [{ id: 'year', label: 'Año', filtrable: true, showLabel: false }],
         label: 'Autos',
         category: 'cars',
+        defaultSearch: 'instant_search_cars',
+        indexesConfig: [
+          { value: 'instant_search_cars_price_asc', label: 'Precio asc.' },
+          { value: 'instant_search_cars_price_desc', label: 'Precio desc.' },
+        ],
       },
       exact: true,
     },
@@ -90,6 +100,7 @@ function App() {
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName={componentConfig.config.category} searchClient={searchClient}>
               <ResultsPage
+                indexName={componentConfig.config.category}
                 isOpen={isOpen}
                 filterHandler={filterHandler}
                 shouldShowBar={true}
@@ -103,6 +114,7 @@ function App() {
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName={componentConfig.config.category} searchClient={searchClient}>
               <ResultsPage
+                indexName={componentConfig.config.category}
                 isOpen={isOpen}
                 filterHandler={filterHandler}
                 shouldShowBar={true}

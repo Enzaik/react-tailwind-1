@@ -6,6 +6,7 @@ import { Highlight, connectHits, connectHitInsights } from 'react-instantsearch-
 function Hit({ hit, details }) {
   let counter = 0;
   let bullet = '';
+
   // @TODO: refactor to make generic
   return (
     <div className="bg-white rounded-lg mb-4 overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
@@ -28,7 +29,6 @@ function Hit({ hit, details }) {
             counter++;
             return `${bullet} ${hit[detail.id]} ${detail.label}`;
           })}
-          {/* {hit.beds} camas &bull; {hit.baths} baños */}
         </div>
         <div className="mt-1 font-semibold text-lg leading-tight truncate">
           <Highlight attribute="description" hit={hit} tagName="mark" />
