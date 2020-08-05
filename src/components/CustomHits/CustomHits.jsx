@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import Heart from '../../icons/outline/Heart';
 
 import { Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
-function Hit({ hit, details }) {
+function Hit({ hit, details, config }) {
   let counter = 0;
   let bullet = '';
+
+  const [isStarred, setIsStarred] = useState(hit.starred);
+  const onHeartClick = (hit) => {
+    config.index.partialUpdateObjects([{ starred: !isStarred, objectID: hit.objectID }]).then(({ objectIDs }) => {});
+    setIsStarred(!isStarred);
+  };
 
   // @TODO: refactor to make generic
   return (
     <div className="bg-white rounded-lg mb-4 overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
-        <Heart className="absolute w-4 opacity-50 z-10 right-2 text-white w-8 top-2 hover:opacity-100" />
+        <Heart
+          onClick={() => {
+            onHeartClick(hit);
+          }}
+          fill={`${isStarred ? 'red' : 'black'}`}
+          className={`${
+            isStarred ? 'opacity-100' : 'opacity-50'
+          }  absolute w-4 z-10 right-2 text-white w-8 top-2 hover:opacity-100`}
+        />
         <LazyLoadImage
           className="absolute h-48 w-full object-cover transition duration-200 ease-in-out opacity-100 hover:opacity-50"
           src={hit.url}
@@ -53,11 +67,11 @@ function Hit({ hit, details }) {
 
 const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
-const Hits = ({ hits, details }) => (
+const Hits = ({ hits, details, config }) => (
   <>
     <div className="grid border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl xl:grid-cols-4 ">
       {hits.map((hit) => (
-        <HitWithInsights key={hit.objectID} hit={hit} details={details} />
+        <HitWithInsights key={hit.objectID} hit={hit} details={details} config={config} />
       ))}
     </div>
   </>

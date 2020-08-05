@@ -6,9 +6,6 @@ import Filters from '../../components/Filters/Filters';
 const SearchHits = lazy(() => import('../../components/SearchHits/SearchHits'));
 
 function SearchHitsComponent({ isOpen, filterHandler, shouldShowBar, config, indexName }) {
-  useEffect(() => {
-    console.log(indexName, config.category);
-  });
   return (
     <div className="h-screen">
       <div className="fixed w-full z-20">

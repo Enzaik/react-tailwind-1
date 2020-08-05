@@ -33,7 +33,7 @@ function SearchHits({ label, category, details, config }) {
                 />
               </div>
             </div>
-            <CustomHits details={details} />
+            <CustomHits details={details} config={config} />
           </main>
         </div>
         <div className="hidden md:block">
@@ -52,7 +52,7 @@ function SearchHits({ label, category, details, config }) {
                 />
               </div>
             </div>
-            <CustomHits details={details} />
+            <CustomHits details={details} config={config} />
           </main>
         </div>
       </Suspense>

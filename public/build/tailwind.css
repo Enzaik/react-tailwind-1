@@ -2143,6 +2143,12 @@ video {
   color: rgba(66, 56, 157, var(--text-opacity));
 }
 
+.text-indigo-900 {
+  --text-opacity: 1;
+  color: #362f78;
+  color: rgba(54, 47, 120, var(--text-opacity));
+}
+
 .text-coldgray-400 {
   --text-opacity: 1;
   color: #9AA5B1;

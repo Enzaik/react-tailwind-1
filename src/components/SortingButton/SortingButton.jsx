@@ -42,7 +42,7 @@ const SortingButton = ({ isOpen, setIsOpen, isSmall, items, refine, createURL })
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
     >
-      <div class="origin-top-right z-10 absolute right-0 mt-2 w-56 rounded-md shadow-lg">
+      <div class="origin-top-right z-30 absolute right-0 mt-2 w-56 rounded-md shadow-lg">
         <div class="rounded-md bg-white shadow-xs">
           <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="sort-menu">
             {items.map((item) => (

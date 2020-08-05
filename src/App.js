@@ -15,12 +15,19 @@ const NewAdCar = lazy(() => import('./components/NewAd/NewAdCar'));
 function App() {
   const searchClient = algoliasearch('I48K3G5GE1', '8832d7240edde67aee54ae7de5276e0d');
   const housesIndex = searchClient.initIndex('houses');
+  const carsIndex = searchClient.initIndex('cars');
 
   const [isOpen, setIsOpen] = useState(false);
+
   const filterHandler = (e) => {
     e.preventDefault();
     setIsOpen(!isOpen);
   };
+
+  // const onHeartClick = (hit) => {
+  //   console.log(hit);
+  // };
+
   const componentsConfig = [
     {
       component: 'Pricing',
@@ -37,6 +44,7 @@ function App() {
         ],
         label: 'Casas',
         category: 'houses',
+        index: housesIndex,
         defaultSearch: 'instant_search',
         indexesConfig: [
           { value: 'instant_search_price_asc', label: 'Precio asc.' },
@@ -52,6 +60,7 @@ function App() {
         items: [{ id: 'year', label: 'Año', filtrable: true, showLabel: false }],
         label: 'Autos',
         category: 'cars',
+        index: carsIndex,
         defaultSearch: 'instant_search_cars',
         indexesConfig: [
           { value: 'instant_search_cars_price_asc', label: 'Precio asc.' },
@@ -143,7 +152,7 @@ function App() {
         return (
           <Route exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="cars" searchClient={searchClient}>
-              <NewAdCar shouldShowBar={false} housesIndex={housesIndex} />
+              <NewAdCar shouldShowBar={false} carsIndex={carsIndex} />
             </InstantSearch>
           </Route>
         );
