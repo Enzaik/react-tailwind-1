@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useState } from 'react';
 import { connectSortBy } from 'react-instantsearch-dom';
 
 import CustomHits from '../CustomHits/CustomHits';
-import SortingButton from '../SortingButton/SortingButton';
+import SortingButton from '../SortingButton';
 
 const VerticalFilter = lazy(() => import('../Filters/VerticalFilter'));
 const CustomCurrentRefinements = lazy(() => import('../../Refinements'));
@@ -31,7 +31,7 @@ function SearchHits({ label, category, details, config }) {
         <div className="hidden md:block">
           <main className=" pt-24 mx-auto py-6 sm:px-6 margin-filter lg:px-8">
             {/* <div className="sticky top-76 z-20 flex max-w-5xl mx-auto px-2 justify-between items-baseline"> */}
-            <div className="top-76 z-20 flex max-w-5xl mx-auto px-2 justify-between items-baseline">
+            <div className="top-76 z-20 flex max-w-5xl mx-auto px-2 justify-between">
               <div className="font-semibold text-3xl">{label}</div>
               <CustomCurrentRefinements />
               <div className="flex">
