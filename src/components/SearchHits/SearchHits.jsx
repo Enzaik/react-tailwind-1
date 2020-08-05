@@ -23,7 +23,15 @@ function SearchHits({ label, category, details, config }) {
           <main className="max-w-7xl pt-content mx-auto px-4 py-6 sm:px-6 md:ml-1/5 lg:px-8 ">
             <div className="flex px-2 justify-between items-baseline ">
               <div className="text-2xl font-semibold">{label}</div>
-              <div className="text-sm text-indigo-600">Ver más</div>
+              <div className="flex">
+                <SortingButton
+                  isSmall={true}
+                  isOpen={isOpen}
+                  setIsOpen={setIsOpen}
+                  defaultRefinement={config.defaultSearch}
+                  items={config.indexesConfig}
+                />
+              </div>
             </div>
             <CustomHits details={details} />
           </main>
@@ -36,6 +44,7 @@ function SearchHits({ label, category, details, config }) {
               <CustomCurrentRefinements />
               <div className="flex">
                 <SortingButton
+                  isSmall={false}
                   isOpen={isOpen}
                   setIsOpen={setIsOpen}
                   defaultRefinement={config.defaultSearch}

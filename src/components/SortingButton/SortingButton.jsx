@@ -3,18 +3,20 @@ import React from 'react';
 import Transition from '../../Transition';
 import { connectSortBy } from 'react-instantsearch-dom';
 
-const SortingButton = ({ isOpen, setIsOpen, items, refine, createURL }) => (
+const SortingButton = ({ isOpen, setIsOpen, isSmall, items, refine, createURL }) => (
   <div class="relative">
     <button
       onClick={() => setIsOpen(false)}
       className={` ${isOpen ? 'fixed' : 'hidden'} top-0 left-0 bottom-0 right-0 h-full w-full`}
     ></button>
-    <span class="rounded-md shadow-sm">
+    <span class="rounded-md ">
       <button
         onClick={() => setIsOpen(!isOpen)}
         id="sort-menu"
         type="button"
-        class="inline-flex justify-center rounded-md text-indigo-600 bg-indigo-100 border-none px-4 py-2 text-sm leading-5 font-medium  hover:bg-indigo-100 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-indigo-800 transition ease-in-out duration-150"
+        class={`${
+          isSmall ? '' : 'bg-indigo-100'
+        } inline-flex justify-center rounded-md text-indigo-600 border-none px-4 py-2 text-sm leading-5 font-medium  hover:bg-indigo-100 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-indigo-800 transition ease-in-out duration-150`}
         aria-haspopup="true"
         aria-expanded="false"
       >
