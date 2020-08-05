@@ -11,7 +11,7 @@ function SearchHitsComponent({ isOpen, filterHandler, shouldShowBar, config, ind
   });
   return (
     <div className="h-screen">
-      <div className="fixed w-full z-10">
+      <div className="fixed w-full z-20">
         <Navbar filterHandler={filterHandler} shouldShowBar={shouldShowBar} />
         <div className="md:hidden">
           <SearchInput filterHandler={filterHandler} />

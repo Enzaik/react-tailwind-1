@@ -1,6 +1,8 @@
 import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+import Heart from '../../icons/outline/Heart';
+
 import { Highlight, connectHits, connectHitInsights } from 'react-instantsearch-dom';
 
 function Hit({ hit, details }) {
@@ -11,6 +13,7 @@ function Hit({ hit, details }) {
   return (
     <div className="bg-white rounded-lg mb-4 overflow-hidden sm:mx-2 sm:my-2 shadow-lg hover:cursor-pointer sm:w-25">
       <div className="relative pb-48">
+        <Heart className="absolute w-4 opacity-50 z-10 right-2 text-white w-8 top-2 hover:opacity-100" />
         <LazyLoadImage
           className="absolute h-48 w-full object-cover transition duration-200 ease-in-out opacity-100 hover:opacity-50"
           src={hit.url}
