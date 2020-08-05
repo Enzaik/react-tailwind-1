@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,
+  //  useEffect
+   } from 'react';
 import { connectRange } from 'react-instantsearch-dom';
 
 const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) => {
@@ -7,13 +9,13 @@ const CustomRangeInput = ({ currentRefinement, min, max, precision, refine }) =>
     max: currentRefinement.max || max,
   });
 
-  useEffect(() => {
-    setRefinement({ min: currentRefinement.min, max: currentRefinement.max });
-  }, []);
+  // useEffect(() => {
+  //   setRefinement({ min: currentRefinement.min, max: currentRefinement.max });
+  // }, []);
 
-  useEffect(() => {
-    setRefinement({ min: currentRefinement.min, max: currentRefinement.max });
-  }, [min, max]);
+  // useEffect(() => {
+  //   setRefinement({ min: currentRefinement.min, max: currentRefinement.max });
+  // }, [min, max]);
 
   const handleRefinement = (e) => {
     e.preventDefault();

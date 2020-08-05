@@ -1,5 +1,8 @@
 import React from 'react';
-import { connectAutoComplete, connectHitInsights, Highlight, connectHighlight } from 'react-instantsearch-dom';
+import {
+  //  connectAutoComplete, connectHitInsights, Highlight,
+  connectHighlight,
+} from 'react-instantsearch-dom';
 
 const MyHighlight = ({ highlight, attribute, hit }) => {
   const parsedHit = highlight({

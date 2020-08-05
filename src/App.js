@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react';
+import React, { lazy, Suspense, useState } from 'react';
 import algoliasearch from 'algoliasearch';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -24,19 +24,17 @@ function App() {
     setIsOpen(!isOpen);
   };
 
-  // const onHeartClick = (hit) => {
-  //   console.log(hit);
-  // };
-
   const componentsConfig = [
     {
       component: 'Pricing',
       path: '/pricing',
+      key: '/pricing',
       exact: true,
     },
     {
       component: 'ResultsPage',
       path: '/houses',
+      key: '/houses',
       config: {
         items: [
           { id: 'beds', label: 'Camas', filtrable: true, showLabel: true },
@@ -56,6 +54,7 @@ function App() {
     {
       component: 'ResultsPage',
       path: '/cars',
+      key: '/cars',
       config: {
         items: [{ id: 'year', label: 'Año', filtrable: true, showLabel: false }],
         label: 'Autos',
@@ -72,26 +71,31 @@ function App() {
     {
       component: 'ResultsPage ',
       path: '/',
+      key: '/',
       exact: false,
     },
     {
       component: 'Search ',
       path: '/search',
+      key: '/search',
       exact: false,
     },
     {
       component: 'CustomBreadcrumb ',
       path: '/landing',
+      key: '/landing',
       exact: false,
     },
     {
       component: 'NewAd ',
       path: '/newad',
+      key: '/newad',
       exact: false,
     },
     {
       component: 'NewAdCar ',
       path: '/newad-car',
+      key: '/newad-car',
       exact: false,
     },
   ];
@@ -100,13 +104,13 @@ function App() {
     switch (componentConfig.path) {
       case '/pricing':
         return (
-          <Route exact={componentConfig.exact} path={componentConfig.path}>
+          <Route key={componentConfig.key} exact={componentConfig.exact} path={componentConfig.path}>
             <Pricing />
           </Route>
         );
       case '/houses':
         return (
-          <Route exact={componentConfig.exact} path={componentConfig.path}>
+          <Route key={componentConfig.key} exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName={componentConfig.config.category} searchClient={searchClient}>
               <ResultsPage
                 indexName={componentConfig.config.category}
@@ -120,7 +124,7 @@ function App() {
         );
       case '/cars':
         return (
-          <Route exact={componentConfig.exact} path={componentConfig.path}>
+          <Route key={componentConfig.key} exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName={componentConfig.config.category} searchClient={searchClient}>
               <ResultsPage
                 indexName={componentConfig.config.category}
@@ -134,7 +138,7 @@ function App() {
         );
       case '/search':
         return (
-          <Route exact={componentConfig.exact} path={componentConfig.path}>
+          <Route key={componentConfig.key} exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
               <Search />
             </InstantSearch>
@@ -142,7 +146,7 @@ function App() {
         );
       case '/newad':
         return (
-          <Route exact={componentConfig.exact} path={componentConfig.path}>
+          <Route key={componentConfig.key} exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
               <NewAd shouldShowBar={false} housesIndex={housesIndex} />
             </InstantSearch>
@@ -150,7 +154,7 @@ function App() {
         );
       case '/newad-car':
         return (
-          <Route exact={componentConfig.exact} path={componentConfig.path}>
+          <Route key={componentConfig.key} exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="cars" searchClient={searchClient}>
               <NewAdCar shouldShowBar={false} carsIndex={carsIndex} />
             </InstantSearch>
@@ -158,7 +162,7 @@ function App() {
         );
       case '/landing':
         return (
-          <Route exact={componentConfig.exact} path={componentConfig.path}>
+          <Route key={componentConfig.key} exact={componentConfig.exact} path={componentConfig.path}>
             <InstantSearch indexName="houses" searchClient={searchClient}>
               <CustomBreadcrumb
                 attributes={['categories.lvl0', 'categories.lvl1', 'categories.lvl2', 'categories.lvl3']}
@@ -168,7 +172,7 @@ function App() {
         );
       default:
         return (
-          <Route exact={true} path="/">
+          <Route key="default" exact={true} path="/">
             <InstantSearch indexName="searches" searchClient={searchClient}>
               <Landing />
             </InstantSearch>
@@ -187,7 +191,7 @@ function App() {
         }
       >
         <div className="bg-coldgray-100 text-gray-900 font-inter antialiased">
-          {componentsConfig.map((componentConfig) => renderComponent(componentConfig))}
+          {componentsConfig.map(({ key, ...rest }) => renderComponent({ key, ...rest }))}
         </div>
       </Suspense>
     </Router>

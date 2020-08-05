@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import logo from '../../img/logo.svg';
 
@@ -19,7 +19,6 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('');
   useEffect(() => {
-    console.log(window.location.pathname);
     setActiveLink(window.location.pathname);
   });
   let counterLarge = 0;
@@ -46,7 +45,7 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
                 fill="none"
                 viewBox="0 0 24 24"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               {/* <!-- Icon when menu is open. -->
           <!-- Menu open: "block", Menu closed: "hidden" --> */}
@@ -56,7 +55,7 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
                 fill="none"
                 viewBox="0 0 24 24"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
@@ -78,6 +77,7 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
                 return (
                   <Link
                     to={to}
+                    key={to}
                     className={`${orderClass} ${
                       to === activeLink ? 'border-b-2 border-indigo-500' : ''
                     } inline-flex items-center px-1 pt-1 text-white md:text-gray-900 text-sm font-medium leading-5 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out`}
@@ -95,9 +95,9 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
             >
               <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
                 />
               </svg>
@@ -126,6 +126,7 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
             return (
               <Link
                 to={to}
+                key={to}
                 className={`block pl-3 pr-4 py-2 ${
                   to === activeLink ? 'border-l-4 border-indigo-500' : ''
                 } text-base font-medium text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out`}

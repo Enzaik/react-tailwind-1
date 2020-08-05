@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function HeartIcon(props) {
   return (
-    <svg fill={props.fill || 'black'} fill-opacity="0.5" viewBox="0 0 24 24" stroke="currentColor" {...props}>
+    <svg fill={props.fill || 'black'} fillOpacity="0.5" viewBox="0 0 24 24" stroke="currentColor" {...props}>
       <path
         strokeLinecap="round"
         strokeLinejoin="round"

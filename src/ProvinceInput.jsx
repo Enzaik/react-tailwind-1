@@ -16,13 +16,16 @@ function ProvinceInput({ items, isFromSearch, attribute, currentRefinement, refi
                       onClick={(event) => {
                         refine(item.value);
                       }}
+                      onChange={(event) => {
+                        refine(item.value);
+                      }}
                       id={item.label}
                       type="checkbox"
                       className="form-checkbox bg-gray-900 border-none h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
                       checked={item.isRefined}
                     />
                     <label
-                      for={item.label}
+                      htmlFor={item.label}
                       className={`${item.isRefined ? 'font-bold text-gray-100' : 'font-semibold text-gray-400'}  ml-2`}
                     >
                       {isFromSearch ? <Highlight attribute="label" hit={item} /> : item.label}

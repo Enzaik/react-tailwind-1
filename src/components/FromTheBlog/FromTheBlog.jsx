@@ -58,7 +58,7 @@ function FromTheBlog() {
                     </a>
                   </p>
                   <div className="flex text-sm leading-5 text-gray-500">
-                    <time datetime="2020-03-16">Mar 16, 2020</time>
+                    <time dateTime="2020-03-16">Mar 16, 2020</time>
                     <span className="mx-1">&middot;</span>
                     <span>6 min read</span>
                   </div>
@@ -109,7 +109,7 @@ function FromTheBlog() {
                     </a>
                   </p>
                   <div className="flex text-sm leading-5 text-gray-500">
-                    <time datetime="2020-03-16">Mar 16, 2020</time>
+                    <time dateTime="2020-03-16">Mar 16, 2020</time>
                     <span className="mx-1">&middot;</span>
                     <span>6 min read</span>
                   </div>
@@ -160,7 +160,7 @@ function FromTheBlog() {
                     </a>
                   </p>
                   <div className="flex text-sm leading-5 text-gray-500">
-                    <time datetime="2020-03-16">Mar 16, 2020</time>
+                    <time dateTime="2020-03-16">Mar 16, 2020</time>
                     <span className="mx-1">&middot;</span>
                     <span>6 min read</span>
                   </div>

@@ -10,7 +10,7 @@ function Pricing() {
       </div>
       <div className="font-hindsiliguri max-w-7xl pt-content mx-auto  py-6 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider"></h2>
+          {/* <h2 className="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider"></h2> */}
           <p className="font-montserrat font-semibold text-3xl leading-9  text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
             CuBuySell
           </p>
@@ -50,12 +50,7 @@ function Pricing() {
                               fill="none"
                               viewBox="0 0 24 24"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                              />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
                           <p className="ml-3 text-base leading-6 font-medium text-gray-500">Pariatur quod similique</p>
@@ -68,12 +63,7 @@ function Pricing() {
                               fill="none"
                               viewBox="0 0 24 24"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                              />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
                           <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -88,12 +78,7 @@ function Pricing() {
                               fill="none"
                               viewBox="0 0 24 24"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                              />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
                           <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -144,7 +129,7 @@ function Pricing() {
                       <li className="flex items-start">
                         <div className="flex-shrink-0">
                           <svg className="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -154,7 +139,7 @@ function Pricing() {
                       <li className="mt-4 flex items-start">
                         <div className="flex-shrink-0">
                           <svg className="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -164,7 +149,7 @@ function Pricing() {
                       <li className="mt-4 flex items-start">
                         <div className="flex-shrink-0">
                           <svg className="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -174,7 +159,7 @@ function Pricing() {
                       <li className="mt-4 flex items-start">
                         <div className="flex-shrink-0">
                           <svg className="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -184,7 +169,7 @@ function Pricing() {
                       <li className="mt-4 flex items-start">
                         <div className="flex-shrink-0">
                           <svg className="h-6 w-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
                         <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -230,12 +215,7 @@ function Pricing() {
                               fill="none"
                               viewBox="0 0 24 24"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                              />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
                           <p className="ml-3 text-base leading-6 font-medium text-gray-500">Pariatur quod similique</p>
@@ -248,12 +228,7 @@ function Pricing() {
                               fill="none"
                               viewBox="0 0 24 24"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                              />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
                           <p className="ml-3 text-base leading-6 font-medium text-gray-500">
@@ -268,12 +243,7 @@ function Pricing() {
                               fill="none"
                               viewBox="0 0 24 24"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5 13l4 4L19 7"
-                              />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
                           <p className="ml-3 text-base leading-6 font-medium text-gray-500">

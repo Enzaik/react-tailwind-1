@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { connectAutoComplete, connectHitInsights } from 'react-instantsearch-dom';
@@ -7,10 +7,10 @@ import CustomHighlight from '../CustomHighlight/CustomHighlight';
 
 function MainSearchInput({ hits, currentRefinement, refine }) {
   const [value, setValue] = useState('');
-  const [areSearchResults, setAreSearchResults] = useState(false);
+  // const [areSearchResults, setAreSearchResults] = useState(false);
 
   const inputHandle = (e, hits) => {
-    setAreSearchResults(hits.length, e.target.value.length);
+    // setAreSearchResults(hits.length, e.target.value.length);
     setValue(e.target.value);
     refine(e.currentTarget.value);
   };
@@ -20,8 +20,8 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center h-13 pointer-events-none">
         <svg width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M14.32 12.906l1.096 1.096c.412-.023.83.123 1.145.437l3 3a1.5 1.5 0 01-2.122 2.122l-3-3a1.497 1.497 0 01-.437-1.145l-1.096-1.096a8 8 0 111.414-1.414zM8 14A6 6 0 108 2a6 6 0 000 12z"
             fill="#A0AEC0"
           />
@@ -42,24 +42,6 @@ function MainSearchInput({ hits, currentRefinement, refine }) {
           ))}
         </tbody>
       </table>
-      {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center ">
-        <div className="rounded-md shadow">
-          <Link
-            to="/houses"
-            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 sm:text-md sm:px-2 md:px-10"
-          >
-            Búsqueda avanzada
-          </Link>
-        </div>
-        <div className="mt-3 sm:mt-0 sm:ml-3">
-          <Link
-            to="/houses"
-            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 sm:text-md sm:px-2 md:px-10"
-          >
-            Ver un demo (casas)
-          </Link>
-        </div>
-      </div> */}
     </div>
   );
 }
