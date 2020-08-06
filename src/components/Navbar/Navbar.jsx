@@ -26,8 +26,8 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
   let orderClass = '';
 
   return (
-    <nav className="bg-gray-900 shadow z-20 top-0 md:bg-white">
-      <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
+    <nav className="bg-gray-900 shadow z-20 top-0 md:bg-white md:ml-64">
+      <div className="mx-auto px-2 sm:px-6 md:px-8 lg:px-10">
         <div className="relative flex justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button --> */}
@@ -60,7 +60,7 @@ function Navbar({ filterHandler = null, shouldShowBar }) {
             </button>
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start md:justify-end">
-            <div className="flex-shrink-0 flex items-center">
+            <div className="flex-shrink-0 flex items-center md:hidden">
               <Link to={'/'}>
                 <img className="block lg:hidden h-8 w-auto" src={logo} alt="Workflow logo" />
               </Link>

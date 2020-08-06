@@ -31,3 +31,7 @@
 .sm\:rounded-md {
   border-radius: 0.375rem;
 }
+
+.md\:margin-filter {
+  @apply margin-filter;
+}

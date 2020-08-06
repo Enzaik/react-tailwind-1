@@ -69,7 +69,7 @@ const HitWithInsights = connectHitInsights(window.aa)(Hit);
 
 const Hits = ({ hits, details, config }) => (
   <>
-    <div className="grid border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3 lg:max-w-5xl xl:grid-cols-4 ">
+    <div className="grid border-gray-200 rounded-lg mx-auto sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4 ">
       {hits.map((hit) => (
         <HitWithInsights key={hit.objectID} hit={hit} details={details} config={config} />
       ))}

@@ -15,7 +15,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine, filterHandler, 
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
     >
-      <div className="hidden md:block bg-white w-full z-10 mx-auto px-2 mt-0 sm:pl-48 sm:pr-0 lg:pl-56 lg:pr-2">
+      <div className="hidden md:block bg-white w-full z-10 mx-auto mt-0 sm:pr-0">
         <div className="relative flex justify-between h-full">
           <div className="absolute w-full inset-y-0 left-0 flex">
             <form noValidate action="" role="search" className="relative my-auto w-full mx-auto">

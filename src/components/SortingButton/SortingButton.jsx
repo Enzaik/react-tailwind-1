@@ -15,8 +15,8 @@ const SortingButton = ({ isOpen, setIsOpen, isSmall, items, refine, createURL })
         id="sort-menu"
         type="button"
         className={`${
-          isSmall ? '' : 'bg-gray-300'
-        } inline-flex justify-center rounded-md text-gray-600 border-none px-4 py-2 text-sm leading-5 font-medium  hover:bg-gray-100 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150`}
+          isSmall ? '' : 'bg-gray-200'
+        } inline-flex justify-center rounded-md text-gray-600 border-none px-4 py-2 text-sm leading-5 font-medium  hover:bg-gray-100 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-400 active:text-gray-800 transition ease-in-out duration-150`}
         aria-haspopup="true"
         aria-expanded="false"
       >

@@ -6,7 +6,7 @@ import CustomRefinementList from '../../CustomRefinedList';
 
 const Filters = ({ config }) => {
   return (
-    <div className="fixed h-screen hidden width-left-panel md:block top-0 z-20 bg-gray-900">
+    <div className="fixed h-screen hidden w-64 md:block top-0 z-20 bg-gray-900">
       <div className="w-full h-full bg-gray-800 ">
         <div className="flex justify-center py-3 h-16 border-b border-gray-900">
           <Link to={'/'}>
