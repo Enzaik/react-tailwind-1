@@ -24,7 +24,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
-    "tailwindcss": "^1.6.0"
+    "tailwindcss": "^1.6.0",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,7 +33,9 @@
     "build:tailwind": "postcss public/css/tailwind.css -o public/build/tailwind.css",
     "test": "react-scripts test",
     "stylelint": "stylelint --fix",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -60,5 +63,6 @@
     "stylelint": "^13.5.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-standard": "^20.0.0"
-  }
+  },
+  "snyk": true
 }
