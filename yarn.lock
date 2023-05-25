@@ -1629,6 +1629,11 @@
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.3.tgz#5405ee8e444ed212db44e79351f0c70a582aae25"
   integrity sha512-DetpxZw1fzPD5xUBrIAoplLChO2VB8DlL5Gg+I1IR9b2wPqYIca2WSUxL5g1vLeR4MsQq1NeWriXAVffV+U1Fw==
 
+"@snyk/protect@^1.1166.0":
+  version "1.1166.0"
+  resolved "https://registry.yarnpkg.com/@snyk/protect/-/protect-1.1166.0.tgz#ea4e1773eda0fce58c5d3831ed467de4e3a36eee"
+  integrity sha512-M2uSZpeHKCdVVymNLRBta1UHnSICrqLC5VHqvfxtUms28HAE9FYKyUc0wK8iEmfRVif/ldXnbKkyc9hq/bIQJA==
+
 "@stylelint/postcss-css-in-js@^0.37.1":
   version "0.37.1"
   resolved "https://registry.yarnpkg.com/@stylelint/postcss-css-in-js/-/postcss-css-in-js-0.37.1.tgz#41e5e7660f73d88227610e18c6ebb262d56ac125"
