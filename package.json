@@ -13,8 +13,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "algoliasearch": "^4.2.0",
-    "autoprefixer": "^9.8.0",
-    "postcss-cli": "^7.1.1",
+    "autoprefixer": "^10.0.0",
+    "postcss-cli": "^8.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-instantsearch-dom": "^6.5.0",
@@ -22,9 +22,9 @@
     "react-lazyload": "^3.0.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.0",
     "react-transition-group": "^4.4.1",
-    "tailwindcss": "^1.6.0"
+    "tailwindcss": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
